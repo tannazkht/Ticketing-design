@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>داشبورد تیکت - استیشن سافت</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f6fa;
+            color: #273240;
+            direction: rtl;
+        }
+
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 280px;
+            background-color: #f9fafb;
+            border-left: 1px solid #e5e7eb;
+            padding: 24px 16px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .logo h1 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #6b7280;
+            letter-spacing: 2px;
+        }
+
+        .logo-subtitle {
+            font-size: 14px;
+            color: #9ca3af;
+            margin-top: 4px;
+        }
+
+        .nav-menu {
+            list-style: none;
+        }
+
+        .nav-item {
+            margin-bottom: 8px;
+        }
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 12px 16px;
+            color: #6b7280;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.2s;
+            font-size: 14px;
+        }
+
+        .nav-link:hover {
+            background-color: #f3f4f6;
+            color: #273240;
+        }
+
+        .nav-link.active {
+            background-color: #e0e4f7;
+            color: #707fdd;
+            font-weight: 600;
+        }
+
+        .nav-icon {
+            margin-left: 12px;
+            width: 20px;
+            height: 20px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-badge {
+            background-color: #ef4444;
+            color: white;
+            font-size: 11px;
+            padding: 2px 8px;
+            border-radius: 12px;
+            margin-right: auto;
+        }
+
+        .nav-divider {
+            margin: 16px 0;
+            border: none;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .nav-section-title {
+            font-size: 11px;
+            color: #9ca3af;
+            padding: 8px 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header */
+        .header {
+            background-color: white;
+            border-bottom: 1px solid #e5e7eb;
+            padding: 16px 32px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .user-section {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .user-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #707fdd;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .user-name {
+            font-size: 14px;
+            font-weight: 500;
+            color: #273240;
+        }
+
+        .notification-icon {
+            position: relative;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f3f4f6;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .notification-badge {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            width: 8px;
+            height: 8px;
+            background-color: #ef4444;
+            border-radius: 50%;
+            border: 2px solid white;
+        }
+
+        .search-bar {
+            flex: 1;
+            max-width: 400px;
+            margin: 0 32px;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 10px 16px;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 14px;
+            background-color: #f9fafb;
+            text-align: right;
+        }
+
+        .search-input::placeholder {
+            color: #9ca3af;
+        }
+
+        /* Content Area */
+        .content {
+            padding: 32px;
+            flex: 1;
+            overflow-y: auto;
+        }
+
+        .content-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+
+        .page-title {
+            font-size: 14px;
+            color: #9ca3af;
+        }
+
+        .btn-primary {
+            background-color: #707fdd;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: background-color 0.2s;
+        }
+
+        .btn-primary:hover {
+            background-color: #5a6bc9;
+        }
+
+        /* Stats Cards */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+
+        .stat-card {
+            background-color: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 24px;
+            text-align: center;
+        }
+
+        .stat-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 16px;
+            color: #6b7280;
+            font-size: 13px;
+        }
+
+        .stat-icon {
+            width: 20px;
+            height: 20px;
+        }
+
+        .stat-number {
+            font-size: 36px;
+            font-weight: 600;
+            color: #273240;
+        }
+
+        .stat-number.blue {
+            color: #707fdd;
+        }
+
+        .stat-number.red {
+            color: #ef4444;
+        }
+
+        .stat-number.orange {
+            color: #f59e0b;
+        }
+
+        .stat-number.green {
+            color: #10b981;
+        }
+
+        /* Recent Tickets Section */
+        .section-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #273240;
+            margin-bottom: 20px;
+        }
+
+        .filters {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 20px;
+            align-items: center;
+        }
+
+        .filter-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .filter-label {
+            font-size: 13px;
+            color: #6b7280;
+        }
+
+        .filter-input {
+            padding: 8px 12px;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            font-size: 13px;
+            background-color: white;
+        }
+
+        .filter-select {
+            padding: 8px 12px;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            font-size: 13px;
+            background-color: white;
+            cursor: pointer;
+            min-width: 120px;
+        }
+
+        .search-filter {
+            margin-right: auto;
+        }
+
+        .search-filter input {
+            width: 280px;
+        }
+
+        /* Ticket List */
+        .ticket-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .ticket-card {
+            background-color: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 20px 24px;
+        }
+
+        .ticket-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 12px;
+        }
+
+        .ticket-id {
+            color: #707fdd;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .ticket-badges {
+            display: flex;
+            gap: 8px;
+        }
+
+        .badge {
+            padding: 4px 12px;
+            border-radius: 16px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .badge-urgent {
+            background-color: #fee2e2;
+            color: #dc2626;
+            border: 1px solid #fecaca;
+        }
+
+        .badge-review {
+            background-color: #dbeafe;
+            color: #2563eb;
+            border: 1px solid #bfdbfe;
+        }
+
+        .badge-medium {
+            background-color: #fed7aa;
+            color: #ea580c;
+            border: 1px solid #fdba74;
+        }
+
+        .badge-low {
+            background-color: #e5e7eb;
+            color: #6b7280;
+            border: 1px solid #d1d5db;
+        }
+
+        .badge-resolved {
+            background-color: #d1fae5;
+            color: #059669;
+            border: 1px solid #a7f3d0;
+        }
+
+        .ticket-title {
+            font-size: 15px;
+            font-weight: 600;
+            color: #273240;
+            margin-bottom: 8px;
+        }
+
+        .ticket-description {
+            font-size: 13px;
+            color: #6b7280;
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+
+        .ticket-meta {
+            display: flex;
+            gap: 24px;
+            font-size: 12px;
+            color: #9ca3af;
+        }
+
+        /* Pagination */
+        .pagination {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 24px;
+            padding: 16px 0;
+        }
+
+        .pagination-info {
+            font-size: 13px;
+            color: #6b7280;
+        }
+
+        .pagination-controls {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .pagination-select {
+            padding: 6px 12px;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            font-size: 13px;
+            background-color: white;
+            cursor: pointer;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: white;
+            border-top: 1px solid #e5e7eb;
+            padding: 20px 32px;
+            text-align: center;
+        }
+
+        .footer-text {
+            font-size: 12px;
+            color: #9ca3af;
+        }
+
+        .footer-logo {
+            margin-top: 12px;
+            opacity: 0.5;
+        }
+
+        /* Icons (using simple SVG shapes) */
+        .icon-dashboard::before { content: "▦"; }
+        .icon-ticket::before { content: "🎫"; }
+        .icon-new::before { content: "➕"; }
+        .icon-knowledge::before { content: "📚"; }
+        .icon-settings::before { content: "⚙"; }
+        .icon-account::before { content: "👤"; }
+        .icon-help::before { content: "❓"; }
+        .icon-bell::before { content: "🔔"; }
+        .icon-search::before { content: "🔍"; }
+        .icon-plus::before { content: "+"; }
+        .icon-calendar::before { content: "📅"; }
+        .icon-filter::before { content: "▼"; }
+        .icon-info::before { content: "ℹ"; }
+        .icon-alert::before { content: "⚠"; }
+        .icon-clock::before { content: "🕐"; }
+        .icon-check::before { content: "✓"; }
+        .icon-camera::before { content: "📷"; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <h1>استیشن</h1>
+                <div class="logo-subtitle">سـافـت</div>
+            </div>
+
+            <nav>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active">
+                            <span>داشبورد</span>
+                            <span class="nav-icon icon-dashboard"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <span>تیکت ها</span>
+                            <span class="nav-icon icon-ticket"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <span>تیکت جدید</span>
+                            <span class="nav-badge">6</span>
+                            <span class="nav-icon icon-new"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <span>پایگاه دانش</span>
+                            <span class="nav-icon icon-knowledge"></span>
+                        </a>
+                    </li>
+                </ul>
+
+                <hr class="nav-divider">
+                <div class="nav-section-title">OTHERS</div>
+
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <span>تنظیمات</span>
+                            <span class="nav-icon icon-settings"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <span>حساب من</span>
+                            <span class="nav-icon icon-account"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <span>کمک</span>
+                            <span class="nav-icon icon-help"></span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <div class="user-section">
+                    <div class="user-avatar"></div>
+                    <div class="user-info">
+                        <span class="user-name">حساب کاربری</span>
+                        <span>▼</span>
+                    </div>
+                    <div class="notification-icon">
+                        <span class="icon-bell"></span>
+                        <span class="notification-badge"></span>
+                    </div>
+                </div>
+
+                <div class="search-bar">
+                    <input type="text" class="search-input" placeholder="جستجو">
+                </div>
+            </header>
+
+            <!-- Content -->
+            <div class="content">
+                <div class="content-header">
+                    <span class="page-title">شو</span>
+                    <button class="btn-primary">
+                        <span>ثبت تیکت</span>
+                        <span class="icon-plus"></span>
+                    </button>
+                </div>
+
+                <!-- Stats Cards -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <span>کل تیکت ها</span>
+                            <span class="stat-icon icon-camera"></span>
+                        </div>
+                        <div class="stat-number">۲۴</div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <span>تیکت های اولویت بالا</span>
+                            <span class="stat-icon icon-alert"></span>
+                        </div>
+                        <div class="stat-number red">۴</div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <span>تیکت های جدید</span>
+                            <span class="stat-icon icon-info"></span>
+                        </div>
+                        <div class="stat-number blue">۴</div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <span>درحال بررسی</span>
+                            <span class="stat-icon icon-clock"></span>
+                        </div>
+                        <div class="stat-number orange">۱۵</div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <span>حل شده</span>
+                            <span class="stat-icon icon-check"></span>
+                        </div>
+                        <div class="stat-number green">۸</div>
+                    </div>
+                </div>
+
+                <!-- Recent Tickets -->
+                <h2 class="section-title">تیکت های اخیر</h2>
+
+                <div class="filters">
+                    <div class="filter-group search-filter">
+                        <input type="text" class="filter-input" placeholder="جستجو">
+                    </div>
+
+                    <div class="filter-group">
+                        <input type="text" class="filter-input" placeholder="از تاریخ">
+                        <span class="icon-calendar"></span>
+                    </div>
+
+                    <span>←</span>
+
+                    <div class="filter-group">
+                        <input type="text" class="filter-input" placeholder="تا تاریخ">
+                        <span class="icon-calendar"></span>
+                    </div>
+
+                    <div class="filter-group">
+                        <select class="filter-select">
+                            <option>وضعیت</option>
+                            <option>فوری</option>
+                            <option>درحال بررسی</option>
+                            <option>متوسط</option>
+                            <option>کم</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Ticket List -->
+                <div class="ticket-list">
+                    <!-- Ticket 1 -->
+                    <div class="ticket-card">
+                        <div class="ticket-header">
+                            <div class="ticket-badges">
+                                <span class="badge badge-urgent">فوری</span>
+                                <span class="badge badge-review">درحال بررسی</span>
+                            </div>
+                            <span class="ticket-id">#۲۰۲۴۰۰۱</span>
+                        </div>
+                        <h3 class="ticket-title">موضوع : کندی در اپلود فایل</h3>
+                        <p class="ticket-description">محتوا: DMS - سیستم مدیریت اسناد و مدارک</p>
+                        <div class="ticket-meta">
+                            <span>آخرین بروزرسانی: ۱۴:۲۰ - ۱۴۰۳/۰۷/۱۵</span>
+                            <span>ایجاد: ۹:۳۰ - ۱۴۰۳/۰۷/۱۵</span>
+                        </div>
+                    </div>
+
+                    <!-- Ticket 2 -->
+                    <div class="ticket-card">
+                        <div class="ticket-header">
+                            <div class="ticket-badges">
+                                <span class="badge badge-medium">متوسط</span>
+                                <span class="badge badge-resolved">بررسی شده</span>
+                            </div>
+                            <span class="ticket-id">#۲۰۲۴۰۰۱</span>
+                        </div>
+                        <h3 class="ticket-title">موضوع : کندی در اپلود فایل</h3>
+                        <p class="ticket-description">محتوا: DMS - سیستم مدیریت اسناد و مدارک</p>
+                        <div class="ticket-meta">
+                            <span>آخرین بروزرسانی: ۱۴:۲۰ - ۱۴۰۳/۰۷/۱۵</span>
+                            <span>ایجاد: ۹:۳۰ - ۱۴۰۳/۰۷/۱۵</span>
+                        </div>
+                    </div>
+
+                    <!-- Ticket 3 -->
+                    <div class="ticket-card">
+                        <div class="ticket-header">
+                            <div class="ticket-badges">
+                                <span class="badge badge-low">کم</span>
+                                <span class="badge badge-resolved">بررسی شده</span>
+                            </div>
+                            <span class="ticket-id">#۲۰۲۴۰۰۱</span>
+                        </div>
+                        <h3 class="ticket-title">موضوع : کندی در اپلود فایل</h3>
+                        <p class="ticket-description">محتوا: DMS - سیستم مدیریت اسناد و مدارک</p>
+                        <div class="ticket-meta">
+                            <span>آخرین بروزرسانی: ۱۴:۲۰ - ۱۴۰۳/۰۷/۱۵</span>
+                            <span>ایجاد: ۹:۳۰ - ۱۴۰۳/۰۷/۱۵</span>
+                        </div>
+                    </div>
+
+                    <!-- Ticket 4 -->
+                    <div class="ticket-card">
+                        <div class="ticket-header">
+                            <div class="ticket-badges">
+                                <span class="badge badge-low">کم</span>
+                                <span class="badge badge-resolved">بررسی شده</span>
+                            </div>
+                            <span class="ticket-id">#۲۰۲۴۰۰۱</span>
+                        </div>
+                        <h3 class="ticket-title">موضوع : کندی در اپلود فایل</h3>
+                        <p class="ticket-description">محتوا: DMS - سیستم مدیریت اسناد و مدارک</p>
+                        <div class="ticket-meta">
+                            <span>آخرین بروزرسانی: ۱۴:۲۰ - ۱۴۰۳/۰۷/۱۵</span>
+                            <span>ایجاد: ۹:۳۰ - ۱۴۰۳/۰۷/۱۵</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination">
+                    <div class="pagination-info">نمایش</div>
+                    <div class="pagination-controls">
+                        <select class="pagination-select">
+                            <option>۱۰</option>
+                            <option>۲۰</option>
+                            <option>۵۰</option>
+                        </select>
+                        <span>در صفحه</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <p class="footer-text">کلیه حقوق مادی و معنوی متعلق به شرکت راهبرد سیستم استیشن میباشد</p>
+                <div class="footer-logo">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                        <circle cx="20" cy="20" r="3" fill="#d1d5db"/>
+                        <circle cx="10" cy="10" r="2" fill="#d1d5db"/>
+                        <circle cx="30" cy="10" r="2" fill="#d1d5db"/>
+                        <circle cx="10" cy="30" r="2" fill="#d1d5db"/>
+                        <circle cx="30" cy="30" r="2" fill="#d1d5db"/>
+                    </svg>
+                </div>
+            </footer>
+        </main>
+    </div>
+</body>
+</html>

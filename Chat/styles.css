@@ -1,0 +1,294 @@
+@import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap");
+
+* {
+  font-family: "Vazirmatn", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body {
+  background-color: #f6f6fb;
+}
+
+/* Restructured layout to match Figma with left details panel */
+
+/* Top Header */
+.top-header {
+  z-index: 1030;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Right Sidebar - Navigation */
+.sidebar-right {
+  width: 200px;
+  background-color: #f8f9fa;
+  overflow-y: auto;
+}
+
+.logo-placeholder {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #707fdd 0%, #1d7ad6 100%);
+  border-radius: 10px;
+}
+
+.sidebar-right .nav-link {
+  color: #6c757d;
+  border-radius: 8px;
+  padding: 10px 12px;
+  transition: all 0.2s;
+  font-size: 14px;
+}
+
+.sidebar-right .nav-link:hover {
+  background-color: #e9ecef;
+  color: #495057;
+}
+
+.sidebar-right .nav-link.active {
+  background-color: #707fdd;
+  color: white;
+}
+
+.sidebar-right .nav-link i {
+  font-size: 16px;
+}
+
+/* Conversation List */
+.conversation-list {
+  width: 350px;
+  background-color: white;
+  overflow-y: auto;
+}
+
+.conversation-item {
+  cursor: pointer;
+  transition: background-color 0.2s;
+  border-bottom: 1px solid #f1f2f7;
+}
+
+.conversation-item:hover {
+  background-color: #f8f9fa;
+}
+
+.conversation-item.active {
+  background-color: #eff6fe;
+  border-right: 3px solid #1d7ad6;
+}
+
+.notification-badge {
+  top: -5px !important;
+  right: -5px !important;
+  font-size: 10px;
+  padding: 3px 6px;
+  min-width: 20px;
+}
+
+/* Chat Area */
+.chat-area {
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.chat-header {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Left Details Panel */
+.details-panel {
+  width: 280px;
+  background-color: #ffffff;
+  overflow-y: auto;
+}
+
+/* Avatars */
+.avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.avatar-sm {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.avatar-lg {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Messages */
+.messages-container {
+  background-color: #fafbfc;
+}
+
+.message-bubble {
+  max-width: 500px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  margin-bottom: 4px;
+  word-wrap: break-word;
+  line-height: 1.5;
+}
+
+.message-sent {
+  background-color: #1d7ad6;
+  color: white;
+  border-bottom-right-radius: 4px;
+}
+
+.message-received {
+  background-color: #f1f2f7;
+  color: #273240;
+  border-bottom-left-radius: 4px;
+}
+
+.message-time {
+  font-size: 11px;
+  color: #909ba5;
+  margin-top: 2px;
+  padding: 0 8px;
+}
+
+/* Message Input */
+.message-input-area {
+  background-color: white;
+  box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.message-input-area .form-control {
+  border: 1px solid #e5e5e5;
+  background-color: #fafbfc;
+  padding: 10px 15px;
+}
+
+.message-input-area .form-control:focus {
+  background-color: #ffffff;
+  border-color: #1d7ad6;
+  box-shadow: 0 0 0 0.2rem rgba(29, 122, 214, 0.1);
+}
+
+.message-input-area .btn {
+  padding: 10px 15px;
+}
+
+/* Badges */
+.badge {
+  font-weight: 500;
+  padding: 6px 12px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c8cbd9;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a6abc8;
+}
+
+/* Button Styles */
+.btn-primary {
+  background-color: #1d7ad6;
+  border-color: #1d7ad6;
+}
+
+.btn-primary:hover {
+  background-color: #1565b8;
+  border-color: #1565b8;
+}
+
+.btn-light {
+  background-color: #f8f9fa;
+  border-color: #e5e5e5;
+}
+
+.btn-light:hover {
+  background-color: #e9ecef;
+  border-color: #d3d3d3;
+}
+
+/* Input Group Styling */
+.input-group .form-control {
+  border-right: none;
+}
+
+.input-group-text {
+  border-left: none;
+}
+
+/* RTL Specific Adjustments */
+[dir="rtl"] .border-end {
+  border-left: 1px solid #dee2e6 !important;
+  border-right: none !important;
+}
+
+[dir="rtl"] .border-start {
+  border-right: 1px solid #dee2e6 !important;
+  border-left: none !important;
+}
+
+/* Responsive Design */
+@media (max-width: 1400px) {
+  .conversation-list {
+    width: 300px;
+  }
+
+  .details-panel {
+    width: 250px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .sidebar-right {
+    width: 70px;
+  }
+
+  .sidebar-right .nav-link span {
+    display: none;
+  }
+
+  .sidebar-right .logo-placeholder {
+    width: 40px;
+    height: 40px;
+  }
+
+  .sidebar-right .fs-6,
+  .sidebar-right .fs-7 {
+    display: none;
+  }
+}
+
+@media (max-width: 992px) {
+  .details-panel {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .conversation-list {
+    width: 250px;
+  }
+}

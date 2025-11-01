@@ -1,0 +1,303 @@
+        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            font-family: 'Vazirmatn', sans-serif;
+        }
+        
+        body {
+            background-color: #f6f6fb;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+        
+        /* Logo Section */
+        .logo-section {
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .logo-dots {
+            display: grid;
+            grid-template-columns: repeat(4, 6px);
+            gap: 4px;
+        }
+        
+        .logo-dots span {
+            width: 6px;
+            height: 6px;
+            background-color: #4d5258;
+            border-radius: 50%;
+            opacity: 0.6;
+        }
+        
+        .logo-text {
+            font-size: 18px;
+            font-weight: 500;
+            color: #4d5258;
+            line-height: 1.2;
+        }
+        
+        /* Login Card */
+        .login-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .login-card {
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            padding: 50px 60px;
+            max-width: 540px;
+            width: 100%;
+        }
+        
+        .login-title {
+            font-size: 28px;
+            font-weight: 600;
+            color: #000000;
+            text-align: center;
+            margin-bottom: 12px;
+        }
+        
+        .login-subtitle {
+            font-size: 15px;
+            font-weight: 400;
+            color: #878787;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        /* Form Labels */
+        .form-label {
+            font-size: 14px;
+            font-weight: 500;
+            color: #4d5258;
+            margin-bottom: 10px;
+        }
+        
+        /* Input Groups */
+        .input-group {
+            margin-bottom: 24px;
+            border-radius: 10px;
+            width: 100%;
+        }
+        .bi-person, .bi-lock {
+            font-size: 27px;
+            color: lightgray;
+            position: relative;
+            right: 25px;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            padding-right: 5px;
+        }
+        .form-control {
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 12px 16px;
+            padding-right: 25px;
+            font-size: 14px;
+            color: #4d5258;
+            background-color: #ffffff;
+            height: 48px;
+        }
+        #password {
+            border-left: none;
+        }
+        .form-control:focus {
+            border-color: #0080c9;
+            box-shadow: 0 0 0 0.2rem rgba(0, 128, 201, 0.15);
+        }
+        
+        .form-control::placeholder {
+            color: #b5bbbe;
+            font-size: 14px;
+        }
+        
+        .input-group-text {
+            background-color: transparent;
+            /*border: 1px solid #dee2e6;*/
+            border-right: none;
+            border-radius: 8px;
+            color: #878787;
+            padding: 0 14px;
+        }
+        
+        .input-group .form-control {
+            border-radius: 8px;
+        }
+        
+        .input-group:focus-within .input-group-text {
+            border-color: #0080c9;
+        }
+        
+        /* Password Toggle */
+        .password-toggle {
+            background: transparent;
+            border: none;
+            border-color: white;
+            color: #878787;
+            cursor: pointer;
+            padding: 0 4px;
+        }
+        
+        .password-toggle:hover {
+            color: #4d5258;
+        }
+        
+        /* Remember Me & Forgot Password Row */
+        .form-options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 28px;
+            direction: ltr;
+        }
+        
+        .form-check {
+            display: flex;
+            align-items: center;
+        }
+        
+        .form-check-input {
+            width: 18px;
+            height: 18px;
+            border: 1px solid #dee2e6;
+            border-radius: 4px;
+            margin-left: 8px;
+            cursor: pointer;
+        }
+        
+        .form-check-input:checked {
+            background-color: #0080c9;
+            border-color: #0080c9;
+        }
+        
+        .form-check-label {
+            font-size: 14px;
+            color: #4d5258;
+            cursor: pointer;
+            margin: 0;
+        }
+        
+        .forgot-password {
+            font-size: 14px;
+            color: #0080c9;
+            text-decoration: none;
+            font-weight: 400;
+        }
+        
+        .forgot-password:hover {
+            color: #006ba6;
+            text-decoration: underline;
+        }
+        
+        /* Login Button */
+        .btn-login {
+            width: 100%;
+            background-color: #0080c9;
+            border: none;
+            border-radius: 8px;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 500;
+            padding: 14px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .btn-login:hover {
+            background-color: #006ba6;
+        }
+        
+        /* Decorative Question Marks 
+        .decorative-questions {
+            position: fixed;
+            bottom: 40px;
+            left: 40px;
+            display: flex;
+            gap: 20px;
+            opacity: 0.15;
+        }
+        
+        .question-mark {
+            font-size: 80px;
+            color: #407bff;
+            font-weight: 300;
+            transform: rotate(-15deg);
+        }
+        
+        .question-mark:nth-child(2) {
+            font-size: 60px;
+            transform: rotate(10deg);
+            margin-top: 30px;
+        }
+        
+        .question-mark:nth-child(3) {
+            font-size: 40px;
+            transform: rotate(-20deg);
+            margin-top: 60px;
+        }
+        */
+
+        .questions {
+            direction: ltr;
+            position: absolute;
+            left: 0;
+            bottom: 30px;
+        }
+
+        /* Footer Text */
+        .footer-text {
+            position: fixed;
+            bottom: 30px;
+            right: 40px;
+            font-size: 13px;
+            color: #878787;
+            max-width: 400px;
+            text-align: right;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .logo-section {
+                top: 20px;
+                right: 20px;
+            }
+            
+            .login-card {
+                padding: 40px 30px;
+            }
+            
+            .decorative-questions {
+                bottom: 20px;
+                left: 20px;
+            }
+            
+            .question-mark {
+                font-size: 50px;
+            }
+            
+            .question-mark:nth-child(2) {
+                font-size: 40px;
+            }
+            
+            .question-mark:nth-child(3) {
+                font-size: 30px;
+            }
+            .questions {
+                position: absolute;
+                top: 550px;
+            }
+            .footer-text {
+                display: none;
+            }
+        }

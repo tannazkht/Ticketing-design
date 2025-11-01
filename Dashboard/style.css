@@ -1,0 +1,345 @@
+        * {
+            font-family: Vazirmatn, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+        
+        body {
+            background-color: #f6f6fb;
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Header Styles */
+        .top-header {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e5e5e5;
+            padding: 12px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .user-section {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .user-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #707fdd;
+        }
+        
+        .notification-badge {
+            position: relative;
+        }
+        
+        .notification-badge::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 8px;
+            height: 8px;
+            background-color: #ec5252;
+            border-radius: 50%;
+            border: 2px solid white;
+        }
+        
+        .search-bar {
+            flex: 1;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .search-bar input {
+            border-radius: 8px;
+            border: 1px solid #e4e8eb;
+            padding: 8px 16px;
+            padding-right: 40px;
+        }
+        
+        .search-icon {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #a6abc8;
+        }
+        
+        .brand-text {
+            font-size: 18px;
+            font-weight: 600;
+            color: #273240;
+            text-align: left;
+            line-height: 1.2;
+        }
+        
+        .brand-text small {
+            display: block;
+            font-size: 14px;
+            font-weight: 400;
+        }
+        
+        /* Sidebar Styles */
+        .sidebar {
+            position: fixed;
+            right: 0;
+            top: 65px;
+            width: 240px;
+            height: calc(100vh - 65px);
+            background-color: #ffffff;
+            border-left: 1px solid #e5e5e5;
+            padding: 24px 0;
+            overflow-y: auto;
+        }
+        
+        .sidebar-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 24px;
+            color: #627b87;
+            text-decoration: none;
+            transition: all 0.2s;
+            font-size: 14px;
+        }
+        
+        .sidebar-item:hover {
+            background-color: #f6f6fb;
+            color: #273240;
+        }
+        
+        .sidebar-item.active {
+            background-color: #707fdd;
+            color: #ffffff;
+            border-radius: 8px;
+            margin: 0 12px;
+            padding-right: 12px;
+        }
+        
+        .sidebar-item .icon-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .sidebar-badge {
+            background-color: #ec5252;
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            font-weight: 600;
+        }
+        
+        .sidebar-divider {
+            margin: 16px 24px;
+            border-top: 1px solid #e5e5e5;
+        }
+        
+        .sidebar-label {
+            padding: 8px 24px;
+            color: #a6abc8;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        /* Main Content */
+        .main-content {
+            margin-right: 240px;
+            padding: 24px;
+            min-height: calc(100vh - 65px);
+        }
+        
+        .page-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 24px;
+        }
+        
+        .page-title {
+            font-size: 24px;
+            font-weight: 600;
+            color: #273240;
+        }
+        
+        /* Filter Section */
+        .filter-section {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+        
+        .filter-row {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .filter-input {
+            border-radius: 8px;
+            border: 1px solid #e4e8eb;
+            padding: 8px 12px;
+            font-size: 14px;
+        }
+        
+        .date-separator {
+            color: #a6abc8;
+            padding: 0 8px;
+        }
+        
+        /* Table Styles */
+        .table-container {
+            background-color: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+        
+        .custom-table {
+            margin-bottom: 0;
+        }
+        
+        .custom-table thead {
+            background-color: #f6f6fb;
+            border-bottom: 2px solid #e5e5e5;
+        }
+        
+        .custom-table thead th {
+            padding: 16px 12px;
+            font-size: 13px;
+            font-weight: 600;
+            color: #627b87;
+            border: none;
+            white-space: nowrap;
+        }
+        
+        .custom-table tbody td {
+            padding: 16px 12px;
+            font-size: 14px;
+            color: #273240;
+            border-bottom: 1px solid #f1f2f4;
+            vertical-align: middle;
+        }
+        
+        .custom-table tbody tr:hover {
+            background-color: #fbfbfb;
+        }
+        
+        /* Status Badges */
+        .status-badge {
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            border: 1px solid;
+        }
+        
+        .status-received {
+            background-color: #ffffff;
+            color: #707fdd;
+            border-color: #707fdd;
+        }
+        
+        .status-waiting {
+            background-color: #ffffff;
+            color: #0080c9;
+            border-color: #0080c9;
+        }
+        
+        .status-rejected {
+            background-color: #ffffff;
+            color: #ec5252;
+            border-color: #ec5252;
+        }
+        
+        .status-reviewed {
+            background-color: #ffffff;
+            color: #216244;
+            border-color: #216244;
+        }
+        
+        /* Pagination */
+        .pagination-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 20px;
+            border-top: 1px solid #e5e5e5;
+        }
+        
+        .pagination-info {
+            font-size: 14px;
+            color: #627b87;
+        }
+        
+        .pagination-controls {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+        
+        .page-btn {
+            padding: 6px 12px;
+            border: 1px solid #e4e8eb;
+            background-color: #ffffff;
+            border-radius: 6px;
+            color: #273240;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+        
+        .page-btn:hover {
+            background-color: #f6f6fb;
+        }
+        
+        .page-btn.active {
+            background-color: #707fdd;
+            color: #ffffff;
+            border-color: #707fdd;
+        }
+        
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #a6abc8;
+            font-size: 13px;
+            background-color: #ffffff;
+            border-top: 1px solid #e5e5e5;
+            margin-right: 240px;
+        }
+        
+        /* Custom Checkbox */
+        .custom-checkbox {
+            width: 18px;
+            height: 18px;
+            border: 2px solid #c8cbd9;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .sidebar {
+                transform: translateX(100%);
+            }
+            
+            .main-content,
+            .footer {
+                margin-right: 0;
+            }
+        }
