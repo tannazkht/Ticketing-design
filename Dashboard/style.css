@@ -151,6 +151,25 @@
             letter-spacing: 0.5px;
         }
         
+        .four-boxes {
+            direction: rtl;
+            width: 100%;
+            display: flex;
+            
+        }
+
+        .four-boxes div {
+            width: 22%;
+            height: 200px;
+            border: 1px solid lightgray;
+            border-radius: 20px;
+            margin: 1%;
+        }
+
+
+
+
+
         /* Main Content */
         .main-content {
             margin-right: 240px;
@@ -237,6 +256,12 @@
             background-color: #fbfbfb;
         }
         
+        td i {
+            font-size: 30px;
+        }
+
+
+
         /* Status Badges */
         .status-badge {
             display: inline-block;
