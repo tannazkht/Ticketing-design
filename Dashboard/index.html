@@ -20,8 +20,8 @@
     <!-- Header -->
     <header class="top-header">        
         <div class="brand-text">
-            استخدام<br>
-            <small>سـافــت</small>
+            استینو<br>
+            سـافــت
         </div>
 
         <div class="search-bar position-relative">
@@ -98,14 +98,25 @@
     </aside>
 
 
-
+    <!-- four boxes for tickets -->
     <div class="four-boxes">
         <div class="box-one">
             <p class="title">کل تیکت ها</p>
+            <span class="icon"><i class="bi bi-ticket-perforated" style="color: gray;"></i></span>
+            <span class="ticket-number">۲۴</span>
         </div>
-        <div class="box-two"></div>
-        <div class="box-three"></div>
-        <div class="box-four"></div>
+        <div class="box-two">
+            <p>تیکت های جدید</p>
+            <span class="icon"><i class="bi bi-exclamation-circle" style="color: lightskyblue"></i></span>
+        </div>
+        <div class="box-three">
+            <p>در حال بررسی</p>
+            <span class="icon"><i class="bi bi-clock-history" style="color: orange"></i></span>
+        </div>
+        <div class="box-four">
+            <p>حل شده</p>
+            <span class="icon"><i class="bi bi-check2-circle" style="color: green"></i></span>
+        </div>
     </div>
 
 
@@ -119,13 +130,7 @@
         <!-- Filter Section -->
         <div class="filter-section">
             <div class="filter-row">
-                <select class="filter-input" style="width: 150px;">
-                    <option>وضعیت</option>
-                    <option>دریافت پرسش</option>
-                    <option>منتظر</option>
-                    <option>رد</option>
-                    <option>بررسی شده</option>
-                </select>
+
                 
                 <input type="text" class="filter-input" placeholder="جستجو" style="flex: 1; min-width: 200px;">
                 
@@ -136,10 +141,17 @@
                 </span>
                 
                 <input type="text" class="filter-input" placeholder="تا تاریخ" style="width: 150px;">
-                
+
                 <button class="btn" style="background-color: #ffffff; border: 1px solid #e4e8eb; border-radius: 8px; padding: 8px 16px;">
                     <i class="bi bi-calendar3"></i>
                 </button>
+                <select class="filter-input" style="width: 150px;">
+                    <option>وضعیت</option>
+                    <option>دریافت پرسش</option>
+                    <option>منتظر</option>
+                    <option>رد</option>
+                    <option>بررسی شده</option>
+                </select>
             </div>
         </div>
 
@@ -356,11 +368,11 @@
                 </div>
                 
                 <div class="pagination-controls">
-                    <button class="page-btn">1</button>
+                    <!-- <button class="page-btn">1</button>
                     <button class="page-btn active">2</button>
                     <button class="page-btn">3</button>
                     <button class="page-btn">4</button>
-                    <button class="page-btn">5</button>
+                    <button class="page-btn">5</button> -->
                     <select class="page-btn" style="width: auto;">
                         <option>10</option>
                         <option>20</option>
