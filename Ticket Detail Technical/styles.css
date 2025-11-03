@@ -25,14 +25,25 @@ body {
   padding: 20px 0;
   z-index: 1000;
 }
-
+.app-name {
+  font-size: 19px;
+  margin-right: 15px;
+  border-bottom: 1px solid #e5e5e5;
+  color: gray;
+}
 .sidebar-header {
   padding: 0 20px 30px;
-  border-bottom: 1px solid #e5e5e5;
+  border-top: 1px solid #e5e5e5;
+  padding-top: 10px;
+  position: relative;
+  margin-top: 330px;
 }
 
 .logo {
   text-align: center;
+  position: absolute;
+  right: 0;
+  padding-right: 10px;
 }
 
 .logo-dots {
@@ -114,7 +125,9 @@ body {
   align-items: center;
   gap: 20px;
 }
-
+/* .header-left .search-box {
+  width: 400px;
+} */
 .user-profile {
   display: flex;
   align-items: center;
@@ -213,7 +226,11 @@ body {
   gap: 8px;
   margin-top: 15px;
 }
-
+.clear-filters a {
+  border: 1px solid lightgray;
+  padding: 2%;
+  border-radius: 5px;
+}
 .btn-filter {
   background: #ffffff;
   border: 1px solid #dadada;
@@ -226,6 +243,7 @@ body {
   gap: 6px;
   cursor: pointer;
   transition: all 0.3s;
+  width: 150px;
 }
 
 .btn-filter:hover {
@@ -451,20 +469,21 @@ body {
 }
 
 .progress-line {
-  width: 80px;
+  width: 20%;
   height: 2px;
   background: #e5e5e5;
   margin: 0 -10px;
   margin-bottom: 24px;
+  margin-right: 1px;
 }
 
-.progress-line.completed {
+/* .progress-line.completed {
   background: #4f555a;
 }
 
 .progress-line.active {
   background: linear-gradient(to left, #0080c9 50%, #e5e5e5 50%);
-}
+} */
 
 /* Ticket Details */
 .ticket-details {
@@ -528,12 +547,32 @@ body {
   margin-top: 20px;
 }
 
-.comment {
+.comment, .comment-reply {
   display: flex;
   gap: 12px;
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
-
+/* .comment-reply img {
+  direction: rtl;
+} */
+.comment-reply-content {
+  padding: 12px 16px;
+  border-radius: 12px;
+  background-color: lightgray;
+  width: 40%;
+  position: absolute;
+  left: 0;
+  border-bottom-left-radius: 0;
+}
+.comment-reply-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  direction: ltr;
+}
 .comment-avatar {
   width: 40px;
   height: 40px;
@@ -541,14 +580,13 @@ body {
   object-fit: cover;
   flex-shrink: 0;
 }
-
 .comment-content {
   flex: 1;
-  background: #ebf4ff;
   padding: 12px 16px;
   border-radius: 12px;
   background-color: #0080c9;
-
+  width: 60%;
+  border-bottom-right-radius: 0;
 }
 
 .comment-header {
@@ -591,8 +629,13 @@ body {
   background: #f6f6fb;
   border-radius: 8px;
   margin-top: 20px;
+  position: relative;
 }
-
+.message-input form input{
+  border: none;
+  background-color: f6f6fb;
+  padding: 30% 50%;
+}
 .btn-primary {
   background: #0080c9;
   color: #ffffff;
@@ -605,6 +648,8 @@ body {
   gap: 8px;
   cursor: pointer;
   transition: all 0.3s;
+  position: absolute;
+  left: 15px;
 }
 
 .btn-primary:hover {
@@ -662,7 +707,7 @@ body {
   }
 }
 
-@media (max-width: 992px) {
+/* @media (max-width: 992px) {
   .sidebar {
     width: 200px;
   }
@@ -678,12 +723,12 @@ body {
   .tickets-panel {
     display: none;
   }
-}
+} */
 
 @media (max-width: 768px) {
-  .sidebar {
+  /* .sidebar {
     transform: translateX(100%);
-  }
+  } */
 
   .main-content {
     margin-left: 0;
