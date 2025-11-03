@@ -209,6 +209,7 @@ body {
 .message-input-area {
   background-color: white;
   box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.05);
+  margin-bottom: 15%;
 }
 
 .message-input-area .form-control {
