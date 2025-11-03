@@ -293,6 +293,27 @@ body {
   border-left: none !important;
 }
 
+.ticket-detail-options {
+  display: flex;
+  direction: row;
+}
+.ticket-detail-options div {
+  padding: 1%;
+}
+.user-image {
+  display: flex;
+  flex-direction: row;
+}
+.user-image img {
+  padding: 3%;
+}
+.add-more-info-button {
+  border-bottom: 1px solid lightgray;
+  padding: 25% 0; 
+}
+.add-more-info-button button{
+  color: gray;
+}
 /* Responsive Design */
 @media (max-width: 1400px) {
   .conversation-list {
