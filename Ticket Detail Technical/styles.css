@@ -70,6 +70,19 @@ body {
   padding: 20px 0;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 .nav-item {
   display: flex;
   align-items: center;
@@ -622,20 +635,24 @@ body {
 
 /* Message Input */
 .message-input {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 15px;
-  background: #f6f6fb;
-  border-radius: 8px;
-  margin-top: 20px;
   position: relative;
+  flex-direction: column;
 }
-.message-input form input{
+.message-input input {
+  padding: 5% 0;
   border: none;
-  background-color: f6f6fb;
-  padding: 30% 50%;
 }
+/* form input {
+  padding: 30% 100%;
+} */
+
+.send-button-input-options {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 2%;
+}
+
 .btn-primary {
   background: #0080c9;
   color: #ffffff;
@@ -648,8 +665,6 @@ body {
   gap: 8px;
   cursor: pointer;
   transition: all 0.3s;
-  position: absolute;
-  left: 15px;
 }
 
 .btn-primary:hover {
@@ -661,10 +676,8 @@ body {
 }
 
 .input-actions {
-  display: flex;
   gap: 8px;
   flex: 1;
-  justify-content: flex-end;
 }
 
 /* Detail Footer */
