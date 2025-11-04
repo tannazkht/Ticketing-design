@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سیستم تیکتینگ</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+
+
+
+
+<section class="main">
+
+
+
+    <!-- Top Navigation -->
+    <nav class="navbar navbar-light bg-white border-bottom px-4">
+        <div class="container-fluid">
+
+            <div class="navbar-brand">
+                <h4 class="mb-0 fw-bold">استینو<br><small class="text-muted fs-6">سافت</small></h4>
+            </div>
+
+
+
+
+            <div class="flex-grow-1 mx-5">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="جستجو...">
+                    <span class="input-group-text bg-white">
+                        <i class="bi bi-search"></i>
+                    </span>
+                </div>
+            </div>
+
+
+
+
+            <div class="d-flex align-items-center gap-3">
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle d-flex align-items-center gap-2" type="button" data-bs-toggle="dropdown">
+                        <!-- Replace placeholder with icon avatar -->
+                        <div class="avatar-circle bg-primary">
+                            <i class="bi bi-person-fill text-white"></i>
+                        </div>
+                        <span>حساب کاربری</span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">پروفایل</a></li>
+                        <li><a class="dropdown-item" href="#">تنظیمات</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">خروج</a></li>
+                    </ul>
+                </div>
+                <button class="btn position-relative">
+                    <i class="bi bi-bell"></i>
+                    <span class="position-absolute top-0 start-0 translate-middle badge rounded-pill bg-danger">
+                        3
+                    </span>
+                </button>
+            </div>
+            
+
+        </div>
+    </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="d-flex">
+        <!-- Right Sidebar -->
+        <div class="sidebar-right bg-light border-start">
+            <div class="p-3">
+                <div class="text-muted small mb-3">منو</div>
+                <ul class="nav flex-column gap-2">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">
+                            <i class="bi bi-grid-fill me-2"></i>
+                            داشبورد
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="bi bi-ticket-perforated me-2"></i>
+                            تیکت ها
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-danger" href="#">
+                            <i class="bi bi-plus-circle me-2"></i>
+                            تیکت جدید
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="bi bi-chat-dots me-2"></i>
+                            پیام ها
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="bi bi-book me-2"></i>
+                            پایگاه دانش
+                        </a>
+                    </li>
+                </ul>
+                
+                <div class="text-muted small mt-4 mb-3">OTHERS</div>
+                <ul class="nav flex-column gap-2">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="bi bi-gear me-2"></i>
+                            تنظیمات
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="bi bi-person me-2"></i>
+                            حساب من
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="bi bi-question-circle me-2"></i>
+                            کمک
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- Main Content -->
+        <div class="flex-grow-1 main-content">
+            <!-- Breadcrumb -->
+            <div class="bg-white border-bottom px-4 py-3">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mb-0">
+                        <li class="breadcrumb-item"><a href="#">خانه</a></li>
+                        <li class="breadcrumb-item"><a href="#">تیکت</a></li>
+                        <li class="breadcrumb-item active">صفحه کنونی</li>
+                    </ol>
+                </nav>
+            </div>
+
+            <!-- Status Progress -->
+            <div class="bg-white border-bottom px-4 py-4">
+                <div class="status-progress-container">
+                    <div class="status-progress-line"></div>
+                    
+                    <div class="status-item">
+                        <div class="status-icon status-completed">
+                            <i class="bi bi-check"></i>
+                        </div>
+                        <div class="status-label">دریافت شده</div>
+                    </div>
+                    
+                    <div class="status-item">
+                        <div class="status-icon status-active">
+                            <i class="bi bi-clock"></i>
+                        </div>
+                        <div class="status-label">درحال بررسی</div>
+                    </div>
+                    
+                    <div class="status-item">
+                        <div class="status-icon status-pending">
+                            <i class="bi bi-check"></i>
+                        </div>
+                        <div class="status-label">حل شده</div>
+                    </div>
+                    
+                    <div class="status-item">
+                        <div class="status-icon status-pending">
+                            <i class="bi bi-check"></i>
+                        </div>
+                        <div class="status-label">بسته شده</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex">
+                <!-- Ticket Content -->
+                <div class="flex-grow-1 p-4">
+                    <!-- Ticket Details Card -->
+                    <div class="card mb-4 ticket-details-card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <h5 class="mb-0"><span class="text-primary">#۴۰۲۰۴۰۰۱</span></h5>
+                                <button class="btn btn-sm btn-status-active">درحال بررسی</button>
+                            </div>
+                            
+                            <div class="mt-3">
+                                <strong>موضوع:</strong> کندی در ایراد فایل قبلی
+                            </div>
+                            
+                            <div class="ticket-description mt-3">
+                                <p>توضیحات: نمیدونم اما نام کاربری و رمز عبور خود وارد سیستم مدیریت اسناد شوم، پیغام خطای نام کاربری یا رمز عبور اشتباه است. تمامش داده میشود.</p>
+                                <div class="attachment-link">
+                                    <span>فایل پیوست:</span>
+                                    <i class="bi bi-paperclip text-muted"></i>
+                                    <a href="#" class="text-primary">screenshot-login-error.png</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Conversation Card -->
+                    <div class="card conversation-card">
+                        <div class="card-header bg-white">
+                            <ul class="nav nav-tabs card-header-tabs" role="tablist">
+                                <li class="nav-item">
+                                    <button class="nav-link active" id="conversation-tab" data-bs-toggle="tab" data-bs-target="#conversation" type="button" role="tab">مکالمه</button>
+                                </li>
+                                <li class="nav-item">
+                                    <button class="nav-link" id="notes-tab" data-bs-toggle="tab" data-bs-target="#notes" type="button" role="tab">یادداشت های داخلی</button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-body">
+                            <div class="tab-content">
+                                <!-- Conversation Tab -->
+                                <div class="tab-pane fade show active" id="conversation" role="tabpanel">
+                                    <div class="conversation-area" id="conversationMessages">
+                                        <!-- Message 1 - Support Message (Right) -->
+                                        <div class="message-wrapper mb-4">
+                                            <div class="d-flex gap-3 align-items-start justify-content-end">
+                                                <!-- Replace placeholder with icon -->
+                                                <div class="message-icon">
+                                                    <i class="bi bi-headset"></i>
+                                                </div>
+                                                <div class="flex-grow-1 d-flex flex-column align-items-end">
+                                                    <div class="message-bubble support-message">
+                                                        سلام. مشکل شما در حال بررسی است. لطفاً نام کاربری دقیق خود را ارسال کنید.
+                                                    </div>
+                                                    <div class="message-meta text-end">
+                                                        علی محمدی - پشتیبانی فنی ۲۵ دی ۱۴۰۳ ساعت ۱۱:۰۰
+                                                    </div>
+                                                </div>
+                                                <!-- Replace placeholder with avatar circle -->
+                                                <div class="message-avatar bg-primary">
+                                                    <i class="bi bi-person-fill text-white"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Message 2 - User Message (Left) -->
+                                        <div class="message-wrapper mb-4">
+                                            <div class="d-flex gap-3 align-items-start">
+                                                <!-- Replace placeholder with avatar circle -->
+                                                <div class="message-avatar bg-secondary">
+                                                    <i class="bi bi-person-fill text-white"></i>
+                                                </div>
+                                                <div class="flex-grow-1">
+                                                    <div class="user-info-message">
+                                                        <strong>نام کاربری من:</strong> ahmad.mohammadi است
+                                                    </div>
+                                                    <div class="message-meta">
+                                                        پارسا حسینی ۲۵ دی ۱۴۰۳ ساعت ۱۱:۰۰
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Message 3 - Support Message (Right) -->
+                                        <div class="message-wrapper mb-4">
+                                            <div class="d-flex gap-3 align-items-start justify-content-end">
+                                                <!-- Replace placeholder with icon -->
+                                                <div class="message-icon">
+                                                    <i class="bi bi-person-circle"></i>
+                                                </div>
+                                                <div class="flex-grow-1 d-flex flex-column align-items-end">
+                                                    <div class="message-bubble user-message">
+                                                        سلام. مشکل شما در حال بررسی است. لطفاً نام کاربری دقیق خود را ارسال کنید.
+                                                    </div>
+                                                    <div class="message-meta text-end">
+                                                        علی محمدی - پشتیبانی فنی ۲۵ دی ۱۴۰۳ ساعت ۱۱:۰۰
+                                                    </div>
+                                                </div>
+                                                <!-- Replace placeholder with avatar circle -->
+                                                <div class="message-avatar bg-info">
+                                                    <i class="bi bi-person-fill text-white"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="text-center text-muted my-4">
+                                        پاسخ خود را بنویسید...
+                                    </div>
+
+                                    <!-- Message Input Container -->
+                                    <div class="message-input-container">
+                                        <div class="input-toolbar">
+                                            <button class="btn btn-light btn-sm" id="emojiBtn" title="افزودن ایموجی">
+                                                <i class="bi bi-emoji-smile"></i>
+                                            </button>
+                                            <button class="btn btn-light btn-sm" id="attachBtn" title="پیوست فایل">
+                                                <i class="bi bi-paperclip"></i>
+                                            </button>
+                                            <button class="btn btn-light btn-sm" id="imageBtn" title="افزودن تصویر">
+                                                <i class="bi bi-image"></i>
+                                            </button>
+                                            <button class="btn btn-light btn-sm" id="fontSizeBtn" title="اندازه فونت">
+                                                <i class="bi bi-type"></i>
+                                            </button>
+                                            
+                                            <!-- Font Size Dropdown -->
+                                            <div class="font-size-dropdown" id="fontSizeDropdown" style="display: none;">
+                                                <button class="font-size-option" data-size="12">کوچک</button>
+                                                <button class="font-size-option" data-size="14">متوسط</button>
+                                                <button class="font-size-option" data-size="16">بزرگ</button>
+                                            </div>
+                                            
+                                            <!-- Emoji Picker -->
+                                            <div class="emoji-picker" id="emojiPicker" style="display: none;">
+                                                <button class="emoji-option">😊</button>
+                                                <button class="emoji-option">👍</button>
+                                                <button class="emoji-option">❤️</button>
+                                                <button class="emoji-option">😂</button>
+                                                <button class="emoji-option">🎉</button>
+                                                <button class="emoji-option">✅</button>
+                                                <button class="emoji-option">🔥</button>
+                                                <button class="emoji-option">💯</button>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="input-group">
+                                            <button class="btn btn-primary" id="sendBtn">
+                                                <i class="bi bi-send-fill"></i>
+                                                ارسال
+                                            </button>
+                                            <input type="text" class="form-control" id="messageInput" placeholder="پیام خود را بنویسید...">
+                                            <input type="file" id="fileInput" style="display: none;" accept="image/*,application/pdf,.doc,.docx">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Internal Notes Tab -->
+                                <div class="tab-pane fade" id="notes" role="tabpanel">
+                                    <div class="conversation-area" id="notesMessages">
+                                        <!-- Internal Note 1 -->
+                                        <div class="message-wrapper mb-4">
+                                            <div class="d-flex gap-3 align-items-start">
+                                                <!-- Replace placeholder with avatar circle -->
+                                                <div class="message-avatar bg-warning">
+                                                    <i class="bi bi-shield-fill-check text-white"></i>
+                                                </div>
+                                                <div class="flex-grow-1">
+                                                    <div class="message-bubble internal-note">
+                                                        این کاربر قبلاً هم مشکل مشابهی داشته است. نیاز به بررسی دقیق‌تر دارد.
+                                                    </div>
+                                                    <div class="message-meta">
+                                                        مدیر سیستم - یادداشت داخلی ۲۵ دی ۱۴۰۳ ساعت ۱۰:۳۰
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="text-center text-muted my-4">
+                                        یادداشت داخلی خود را بنویسید...
+                                    </div>
+
+                                    <div class="message-input-container">
+                                        <div class="input-toolbar">
+                                            <button class="btn btn-light btn-sm" title="افزودن ایموجی">
+                                                <i class="bi bi-emoji-smile"></i>
+                                            </button>
+                                            <button class="btn btn-light btn-sm" title="پیوست فایل">
+                                                <i class="bi bi-paperclip"></i>
+                                            </button>
+                                            <button class="btn btn-light btn-sm" title="افزودن تصویر">
+                                                <i class="bi bi-image"></i>
+                                            </button>
+                                            <button class="btn btn-light btn-sm" title="اندازه فونت">
+                                                <i class="bi bi-type"></i>
+                                            </button>
+                                        </div>
+                                        
+                                        <div class="input-group">
+                                            <button class="btn btn-primary" id="sendNoteBtn">
+                                                <i class="bi bi-send-fill"></i>
+                                                ارسال
+                                            </button>
+                                            <input type="text" class="form-control" id="noteInput" placeholder="یادداشت داخلی خود را بنویسید...">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <!-- Left Sidebar -->
+                <div class="sidebar-left border-start p-3">
+                    <div class="card mb-3">
+                        <div class="card-header bg-white">
+                            جزئیات تیکت
+                        </div>
+                        <div class="card-body">
+                            <div class="ticket-detail-item">
+                                <span class="detail-label">نام مشتری:</span>
+                                <span class="detail-value">موفق محمدی</span>
+                            </div>
+                            <div class="ticket-detail-item">
+                                <span class="detail-label">شماره تماس:</span>
+                                <span class="detail-value">۰۹۱۲۲۷۰۸۰۱</span>
+                            </div>
+                            <div class="ticket-detail-item">
+                                <span class="detail-label">تاریخ ایجاد:</span>
+                                <span class="detail-value">۱۴۰۳/۰۷/۱۵ - ۱۴:۳۰</span>
+                            </div>
+                            <div class="ticket-detail-item">
+                                <span class="detail-label">آخرین بروزرسانی:</span>
+                                <span class="detail-value">۱۴۰۳/۰۷/۱۵ - ۱۴:۲۰</span>
+                            </div>
+                            <div class="ticket-detail-item">
+                                <span class="detail-label">محصول:</span>
+                                <span class="detail-value">DMS - سیستم مدیریت اسناد و مدارک</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3">
+                        <div class="card-header bg-white">
+                            مدیریت وضعیت
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <label class="form-label small text-muted">اولویت</label>
+                                <select class="form-select">
+                                    <option>فوری</option>
+                                    <option>بالا</option>
+                                    <option>متوسط</option>
+                                    <option>پایین</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label small text-muted">وضعیت فعلی</label>
+                                <select class="form-select">
+                                    <option>درحال بررسی</option>
+                                    <option>در انتظار پاسخ</option>
+                                    <option>حل شده</option>
+                                    <option>بسته شده</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-outline-secondary w-100 mb-3" data-bs-toggle="modal" data-bs-target="#transferModal">
+                        <i class="bi bi-arrow-left-right me-2"></i>
+                        انتقال به همکار دیگر
+                    </button>
+
+                    <button class="btn btn-outline-secondary w-100" data-bs-toggle="modal" data-bs-target="#reminderModal">
+                        <i class="bi bi-calendar me-2"></i>
+                        تنظیم یادآوری
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white border-top py-3 text-center text-muted small">
+        .کلیه حقوق مادی و معنوی متعلق به شرکت راهبرد سیستم ایساتیس می باشد
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+    
+    <!-- Transfer Modal -->
+    <div class="modal fade" id="transferModal" tabindex="-1" aria-labelledby="transferModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h5 class="modal-title" id="transferModalLabel">انتقال تیکت به همکار دیگر</h5>
+                </div>
+                <div class="modal-body px-4">
+                    <div class="mb-4">
+                        <label class="form-label">انتخاب همکار</label>
+                        <select class="form-select form-select-lg">
+                            <option selected>انتخاب کنید</option>
+                            <option value="1">علی محمدی</option>
+                            <option value="2">سارا احمدی</option>
+                            <option value="3">رضا کریمی</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label">توضیحات</label>
+                        <textarea class="form-control" rows="4" placeholder="توضیحات خود را وارد کنید"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer border-0 px-4 pb-4">
+                    <button type="button" class="btn btn-outline-primary px-4" data-bs-dismiss="modal">لغو</button>
+                    <button type="button" class="btn btn-primary px-4">ذخیره</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Reminder Modal -->
+    <div class="modal fade" id="reminderModal" tabindex="-1" aria-labelledby="reminderModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h5 class="modal-title" id="reminderModalLabel">تنظیم یادآوری</h5>
+                </div>
+                <div class="modal-body px-4">
+                    <div class="mb-4">
+                        <label class="form-label">انتخاب تاریخ</label>
+                        <input type="text" class="form-control form-control-lg" id="reminderDate" placeholder="تاریخ را انتخاب کنید">
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label">انتخاب زمان</label>
+                        <input type="time" class="form-control form-control-lg" id="reminderTime">
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label">توضیحات</label>
+                        <textarea class="form-control" rows="4" placeholder="توضیحات خود را وارد کنید"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer border-0 px-4 pb-4">
+                    <button type="button" class="btn btn-outline-primary px-4" data-bs-dismiss="modal">لغو</button>
+                    <button type="button" class="btn btn-primary px-4">ذخیره</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</section>
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/fa.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
