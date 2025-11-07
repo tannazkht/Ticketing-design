@@ -11,7 +11,14 @@
 </head>
 <body>
     <div class="container">
-        <!-- Sidebar -->
+
+
+
+
+
+
+
+        <!-- Sidebar
         <aside class="sidebar">
             <div class="logo">
                 <h1>استینو</h1>
@@ -71,24 +78,104 @@
                     </li>
                 </ul>
             </nav>
-        </aside>
+        </aside> -->
+
+
+
+
+            <!-- Right Sidebar -->
+            <div class="col-auto sidebar-right bg-light border-end">
+                <div class="d-flex flex-column h-100">
+                    <!-- Logo -->
+                    <div class="text-center py-4 border-bottom company-name">
+                        <!-- <div class="logo-placeholder mx-auto mb-2"></div> -->
+                        <div class="fs-6 fw-bold text-dark">استینو</div>
+                        <div class="fs-7 text-muted">سافت</div>
+                    </div>
+                    
+                    <!-- Navigation -->
+                    <nav class="flex-grow-1 py-3">
+                        <ul class="nav flex-column gap-1 px-3 h-100">
+                                <span style="color: gray;">منو</span>
+
+                            <li class="nav-item">
+                                <a class="nav-link active d-flex align-items-center gap-2" href="#">
+                                    <span>داشبورد</span>
+                                    <i class="bi bi-grid-fill"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link d-flex align-items-center gap-2" href="#">
+                                    <span>تیکت ها</span>
+                                    <i class="bi bi-ticket-perforated"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link d-flex align-items-center gap-2" href="#">
+                                    <span>تیکت جدید</span>
+                                    <i class="bi bi-file-text"></i>
+                                    <!-- <i class="bi bi-chat-dots"></i> -->
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link d-flex align-items-center gap-2" href="#">
+                                    <span>پایگاه دانش</span>
+                                    <i class="bi bi-book"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        
+                        <div class="px-3 mt-4">
+                            <div class="text-muted small mb-2 px-2">OTHERS</div>
+                            <ul class="nav flex-column gap-1">
+                                <li class="nav-item">
+                                    <a class="nav-link d-flex align-items-center gap-2" href="#">
+                                        <span>تنظیمات</span>
+                                        <i class="bi bi-gear"></i>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link d-flex align-items-center gap-2" href="#">
+                                        <span>حساب من</span>
+                                        <i class="bi bi-person"></i>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link d-flex align-items-center gap-2" href="#">
+                                        <span>کمک</span>
+                                        <i class="bi bi-question-circle"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="py-4 border-top company-image">
+                        <img src="../Vector.svg" alt="company logo" width="40%">
+                        <span>نسخه ۳.۴.۱۵</span>
+                    </div>
+                </div>
+            </div>
+
+
+
+
 
         <!-- Main Content -->
         <main class="main-content">
             <!-- Header -->
             <header class="header">
                 <div class="search-bar">
+                    <!-- <i class="bi bi-search search-icon"></i> -->
                     <input type="text" class="search-input" placeholder="جستجو">
-                    <i class="bi bi-search search-icon"></i>
                 </div>
                 <div class="user-section">
                     <div class="user-avatar"></div>
                     <div class="user-info">
                         <span class="user-name">حساب کاربری</span>
-                        <span>▼</span>
+                        <i class="bi bi-chevron-down" style="color: #a6abc8; font-size: 14px;"></i>
                     </div>
                     <div class="notification-icon">
-                        <span class="icon-bell"></span>
+                        <i class="bi bi-bell" style="color: #a6abc8; font-size: 20px;"></i>
                         <span class="notification-badge"></span>
                     </div>
                 </div>
@@ -100,8 +187,8 @@
             <div class="content">
                 <div class="content-header">
                     <button class="btn-primary">
-                        <span>ثبت تیکت</span>
                         <span class="icon-plus"></span>
+                        <span>ثبت تیکت</span>
                     </button>
                 </div>
 
@@ -110,7 +197,7 @@
                     <div class="stat-card">
                         <div class="stat-header">
                             <span>کل تیکت ها</span>
-                            <span class="stat-icon icon-camera"></span>
+                            <span class="icon"><i class="bi bi-ticket-perforated" style="color: gray;"></i></span>
                         </div>
                         <div class="stat-number">۲۴</div>
                     </div>
@@ -118,7 +205,7 @@
                     <div class="stat-card">
                         <div class="stat-header">
                             <span>تیکت های اولویت بالا</span>
-                            <span class="stat-icon icon-alert"></span>
+                            <span class="icon"><i class="bi bi-exclamation-circle" style="color: red;"></i></span>
                         </div>
                         <div class="stat-number red">۴</div>
                     </div>
@@ -126,7 +213,7 @@
                     <div class="stat-card">
                         <div class="stat-header">
                             <span>تیکت های جدید</span>
-                            <span class="stat-icon icon-info"></span>
+                            <span class="icon"><i class="bi bi-exclamation-circle" style="color: lightskyblue"></i></span>
                         </div>
                         <div class="stat-number blue">۴</div>
                     </div>
@@ -134,7 +221,7 @@
                     <div class="stat-card">
                         <div class="stat-header">
                             <span>درحال بررسی</span>
-                            <span class="stat-icon icon-clock"></span>
+                            <span class="icon"><i class="bi bi-clock-history" style="color: orange"></i></span>
                         </div>
                         <div class="stat-number orange">۱۵</div>
                     </div>
@@ -142,7 +229,7 @@
                     <div class="stat-card">
                         <div class="stat-header">
                             <span>حل شده</span>
-                            <span class="stat-icon icon-check"></span>
+                            <span class="icon"><i class="bi bi-check2-circle" style="color: green"></i></span>
                         </div>
                         <div class="stat-number green">۸</div>
                     </div>
@@ -152,8 +239,9 @@
                 <h2 class="section-title">تیکت های اخیر</h2>
 
                 <div class="filters">
-
-
+                    <div class="filter-group search-filter">
+                        <input type="text" class="filter-input" placeholder="جستجو">
+                    </div>
                     <div class="filter-group">
                         <input type="text" class="filter-input" placeholder="از تاریخ">
                         <span class="icon-calendar"></span>
@@ -175,10 +263,11 @@
                             <option>کم</option>
                         </select>
                     </div>
-                    <div class="filter-group search-filter">
-                        <input type="text" class="filter-input" placeholder="جستجو">
-                    </div>
                 </div>
+
+
+
+
 
                 <!-- Ticket List -->
                 <div class="ticket-list">
@@ -186,25 +275,29 @@
                     <div class="ticket-card">
                         <div class="ticket-header">
                             <div class="ticket-badges">
-                                <span class="badge badge-urgent">فوری</span>
                                 <span class="badge badge-review">درحال بررسی</span>
+                                <span class="badge badge-urgent">فوری</span>
                             </div>
-                            <span class="ticket-id">#۲۰۲۴۰۰۱</span>
+                            <div class="ticketId">
+                                <span class="ticket-id">#۲۰۲۴۰۰۱</span>
+                            </div>
                         </div>
-                        <h3 class="ticket-title">موضوع : کندی در اپلود فایل</h3>
-                        <p class="ticket-description">محتوا: DMS - سیستم مدیریت اسناد و مدارک</p>
-                        <div class="ticket-meta">
-                            <span>آخرین بروزرسانی: ۱۴:۲۰ - ۱۴۰۳/۰۷/۱۵</span>
-                            <span>ایجاد: ۹:۳۰ - ۱۴۰۳/۰۷/۱۵</span>
-                        </div>
+                            <div class="right-side-details">
+                                <h3 class="ticket-title">موضوع : کندی در اپلود فایل</h3>
+                                <p class="ticket-description">محصول: DMS - سیستم مدیریت اسناد و مدارک</p>
+                            </div>
+                            <div class="ticket-meta">
+                                <span>آخرین بروزرسانی: ۱۴:۲۰ - ۱۴۰۳/۰۷/۱۵</span>
+                                <span>ایجاد: ۹:۳۰ - ۱۴۰۳/۰۷/۱۵</span>
+                            </div>
                     </div>
 
                     <!-- Ticket 2 -->
                     <div class="ticket-card">
                         <div class="ticket-header">
                             <div class="ticket-badges">
-                                <span class="badge badge-medium">متوسط</span>
                                 <span class="badge badge-resolved">بررسی شده</span>
+                                <span class="badge badge-medium">متوسط</span>
                             </div>
                             <span class="ticket-id">#۲۰۲۴۰۰۱</span>
                         </div>
@@ -220,8 +313,8 @@
                     <div class="ticket-card">
                         <div class="ticket-header">
                             <div class="ticket-badges">
-                                <span class="badge badge-low">کم</span>
                                 <span class="badge badge-resolved">بررسی شده</span>
+                                <span class="badge badge-low">کم</span>
                             </div>
                             <span class="ticket-id">#۲۰۲۴۰۰۱</span>
                         </div>
@@ -237,8 +330,8 @@
                     <div class="ticket-card">
                         <div class="ticket-header">
                             <div class="ticket-badges">
-                                <span class="badge badge-low">کم</span>
                                 <span class="badge badge-resolved">بررسی شده</span>
+                                <span class="badge badge-low">کم</span>
                             </div>
                             <span class="ticket-id">#۲۰۲۴۰۰۱</span>
                         </div>

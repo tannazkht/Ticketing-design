@@ -6,7 +6,7 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f5f6fa;
+            /* background-color: #f5f6fa; */
             color: #273240;
             direction: rtl;
         }
@@ -44,14 +44,83 @@
             margin-top: 4px;
         }
 
+
+
+
+/* 
+/* Right Sidebar - Navigation */
+
+.sidebar-right {
+  width: 200px;
+  background-color: #f8f9fa;
+  overflow-y: auto;
+  /* position: fixed; */
+}
+
+.logo-placeholder {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #707fdd 0%, #1d7ad6 100%);
+  border-radius: 10px;
+}
+
+.sidebar-right .nav-link {
+  color: #6c757d;
+  border-radius: 8px;
+  padding: 10px 12px;
+  transition: all 0.2s;
+  font-size: 14px;
+}
+
+.sidebar-right .nav-link:hover {
+  background-color: #e9ecef;
+  color: #495057;
+}
+
+.sidebar-right .nav-link.active {
+  background-color: #707fdd;
+  color: white;
+}
+
+.sidebar-right .nav-link i {
+  font-size: 16px;
+}
+.company-name {
+    border-bottom: 1px solid lightgray;
+    padding: 5%;
+}
+.company-image {
+  margin-bottom: 75%;
+  display: flex;
+  flex-direction: column;
+  margin-right: 5%;
+  margin-top: 25%;
+}
+.company-image span {
+  color: gray;
+}
+.text-muted {
+    font-size: 13px;
+}
+
+
+
+
+
+
+
+
         .nav-menu {
             list-style: none;
         }
 
         .nav-item {
             margin-bottom: 8px;
+            direction: ltr;
         }
-
+        .nav-item a i {
+            padding: 2%;
+        }
         .nav-link {
             display: flex;
             align-items: center;
@@ -62,6 +131,8 @@
             border-radius: 8px;
             transition: all 0.2s;
             font-size: 14px;
+            /* direction: rtl; */
+
         }
 
         .nav-link:hover {
@@ -112,9 +183,10 @@
             flex: 1;
             display: flex;
             flex-direction: column;
+            /* position: fixed; */
         }
         .search-bar {
-            position: relative;
+            /* position: relative; */
         }
 
         .search-bar i {
@@ -128,7 +200,7 @@
         .header {
             background-color: white;
             border-bottom: 1px solid #e5e7eb;
-            padding: 16px 32px;
+            padding: 10px 32px;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -166,7 +238,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: #f3f4f6;
+            /* background-color: #f3f4f6; */
             border-radius: 8px;
             cursor: pointer;
         }
@@ -216,7 +288,11 @@
             margin-bottom: 24px;
             direction: ltr;
         }
-
+        .icon-plus {
+            border: 1px solid white; 
+            padding: 0 5px; 
+            border-radius: 3px;
+        }
         .page-title {
             font-size: 14px;
             color: #9ca3af;
@@ -340,10 +416,6 @@
             min-width: 120px;
         }
 
-        .search-filter {
-            margin-right: auto;
-        }
-
         .search-filter input {
             width: 280px;
         }
@@ -370,6 +442,9 @@
             margin-bottom: 12px;
         }
 
+        .right-side-details {
+            direction: rtl;
+        }
         .ticket-id {
             color: rgb(72, 130, 255);
             font-size: 14px;
