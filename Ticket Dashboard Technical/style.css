@@ -438,7 +438,7 @@
         .ticket-header {
             display: flex;
             justify-content: space-between;
-            align-items: flex-start;
+            /* align-items: flex-start; */
             margin-bottom: 12px;
         }
 
@@ -504,6 +504,7 @@
 
         .ticket-meta {
             display: flex;
+            flex-direction: column;
             gap: 24px;
             font-size: 12px;
             color: #9ca3af;
