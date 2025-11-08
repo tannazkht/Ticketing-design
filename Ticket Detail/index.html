@@ -33,13 +33,14 @@
 
             <div class="flex-grow-1 mx-5">
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder="جستجو...">
+                    <input type="text" class="form-control" style="background-color: #f8f9fa;" placeholder="جستجو...">
                     <span class="input-group-text bg-white">
                         <i class="bi bi-search"></i>
                     </span>
                 </div>
             </div>
 
+  
 
 
 
@@ -70,24 +71,6 @@
 
         </div>
     </nav>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -268,7 +251,7 @@
                                             <div class="d-flex gap-3 align-items-start justify-content-end">
                                                 <!-- Replace placeholder with icon -->
                                                 <div class="message-icon">
-                                                    <i class="bi bi-headset"></i>
+                                                    <!-- <i class="bi bi-headset"></i> -->
                                                 </div>
                                                 <div class="flex-grow-1 d-flex flex-column align-items-end">
                                                     <div class="message-bubble support-message">
@@ -308,7 +291,7 @@
                                             <div class="d-flex gap-3 align-items-start justify-content-end">
                                                 <!-- Replace placeholder with icon -->
                                                 <div class="message-icon">
-                                                    <i class="bi bi-person-circle"></i>
+                                                    <!-- <i class="bi bi-person-circle"></i> -->
                                                 </div>
                                                 <div class="flex-grow-1 d-flex flex-column align-items-end">
                                                     <div class="message-bubble user-message">
@@ -326,56 +309,111 @@
                                         </div>
                                     </div>
 
-                                    <div class="text-center text-muted my-4">
-                                        پاسخ خود را بنویسید...
-                                    </div>
 
-                                    <!-- Message Input Container -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    <!-- Message Input Container  -->
                                     <div class="message-input-container">
-                                        <div class="input-toolbar">
-                                            <button class="btn btn-light btn-sm" id="emojiBtn" title="افزودن ایموجی">
-                                                <i class="bi bi-emoji-smile"></i>
-                                            </button>
-                                            <button class="btn btn-light btn-sm" id="attachBtn" title="پیوست فایل">
-                                                <i class="bi bi-paperclip"></i>
-                                            </button>
-                                            <button class="btn btn-light btn-sm" id="imageBtn" title="افزودن تصویر">
-                                                <i class="bi bi-image"></i>
-                                            </button>
-                                            <button class="btn btn-light btn-sm" id="fontSizeBtn" title="اندازه فونت">
-                                                <i class="bi bi-type"></i>
-                                            </button>
-                                            
-                                            <!-- Font Size Dropdown -->
-                                            <div class="font-size-dropdown" id="fontSizeDropdown" style="display: none;">
-                                                <button class="font-size-option" data-size="12">کوچک</button>
-                                                <button class="font-size-option" data-size="14">متوسط</button>
-                                                <button class="font-size-option" data-size="16">بزرگ</button>
-                                            </div>
-                                            
-                                            <!-- Emoji Picker -->
-                                            <div class="emoji-picker" id="emojiPicker" style="display: none;">
-                                                <button class="emoji-option">😊</button>
-                                                <button class="emoji-option">👍</button>
-                                                <button class="emoji-option">❤️</button>
-                                                <button class="emoji-option">😂</button>
-                                                <button class="emoji-option">🎉</button>
-                                                <button class="emoji-option">✅</button>
-                                                <button class="emoji-option">🔥</button>
-                                                <button class="emoji-option">💯</button>
-                                            </div>
-                                        </div>
-                                        
                                         <div class="input-group">
-                                            <button class="btn btn-primary" id="sendBtn">
-                                                <i class="bi bi-send-fill"></i>
-                                                ارسال
-                                            </button>
-                                            <input type="text" class="form-control" id="messageInput" placeholder="پیام خود را بنویسید...">
+                                            <input type="text" class="form-control" id="messageInput" style="border: none;" placeholder="پاسخ خود را بنویسید...">
                                             <input type="file" id="fileInput" style="display: none;" accept="image/*,application/pdf,.doc,.docx">
                                         </div>
+
+
+                                        <div class="message-options-and-send-button">
+
+
+                                            <div class="input-toolbar">
+                                                <button class="btn btn-light btn-sm" id="emojiBtn" title="افزودن ایموجی">
+                                                    <i class="bi bi-emoji-smile"></i>
+                                                </button>
+                                                <button class="btn btn-light btn-sm" id="attachBtn" title="پیوست فایل">
+                                                    <i class="bi bi-paperclip"></i>
+                                                </button>
+                                                <button class="btn btn-light btn-sm" id="imageBtn" title="افزودن تصویر">
+                                                    <i class="bi bi-image"></i>
+                                                </button>
+                                                <button class="btn btn-light btn-sm" id="fontSizeBtn" title="اندازه فونت">
+                                                    <i class="bi bi-type"></i>
+                                                </button>
+                                                
+                                                <!-- Font Size Dropdown  -->
+                                                <div class="font-size-dropdown" id="fontSizeDropdown" style="display: none;">
+                                                    <button class="font-size-option" data-size="12">کوچک</button>
+                                                    <button class="font-size-option" data-size="14">متوسط</button>
+                                                    <button class="font-size-option" data-size="16">بزرگ</button>
+                                                </div>
+                                                
+                                                <!-- Emoji Picker  -->
+                                                <div class="emoji-picker" id="emojiPicker" style="display: none;">
+                                                    <button class="emoji-option">😊</button>
+                                                    <button class="emoji-option">👍</button>
+                                                    <button class="emoji-option">❤️</button>
+                                                    <button class="emoji-option">😂</button>
+                                                    <button class="emoji-option">🎉</button>
+                                                    <button class="emoji-option">✅</button>
+                                                    <button class="emoji-option">🔥</button>
+                                                    <button class="emoji-option">💯</button>
+                                                </div>
+                                            </div>
+                                            <div class="send-button">
+                                                <button class="btn btn-primary" id="sendBtn">
+                                                    <i class="bi bi-send-fill"></i>
+                                                ارسال
+                                                </button>
+                                            </div>
+                                         </div>
                                     </div>
                                 </div>
+                                
+
+
+                                
+
+
+                        <!-- <div class="message-input">
+                            <div class="input">
+                                <form action="#" method="#">
+                                    <input type="text" name="type-text" placeholder="پاسخ خود را بنویسید ..." maxlength="50px">
+                                </form>
+                            </div>
+                            <div class="send-button-input-options">
+                                <div class="input-actions">
+                                    <button class="btn btn-icon"><i class="bi bi-paperclip"></i></button>
+                                    <button class="btn btn-icon"><i class="bi bi-emoji-smile"></i></button>
+                                    <button class="btn btn-icon"><i class="bi bi-image"></i></button>
+                                    <button class="btn btn-icon"><i class="bi bi-type"></i></button>
+                                </div>
+                                <div class="send-button">
+                                    <button class="btn btn-primary btn-send">
+                                        <i class="bi bi-send"></i>
+                                        ارسال
+                                    </button>
+                                </div>
+                            </div>
+                        </div> -->
+
+
+
+
+
+
+
+
+
+
+
 
                                 <!-- Internal Notes Tab -->
                                 <div class="tab-pane fade" id="notes" role="tabpanel">
@@ -399,11 +437,15 @@
                                         </div>
                                     </div>
 
-                                    <div class="text-center text-muted my-4">
-                                        یادداشت داخلی خود را بنویسید...
-                                    </div>
+
+
 
                                     <div class="message-input-container">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="noteInput" style="border: none;" placeholder="یادداشت داخلی خود را بنویسید...">
+                                        </div>
+                                        <div class="message-options-and-send-button">
+
                                         <div class="input-toolbar">
                                             <button class="btn btn-light btn-sm" title="افزودن ایموجی">
                                                 <i class="bi bi-emoji-smile"></i>
@@ -418,13 +460,13 @@
                                                 <i class="bi bi-type"></i>
                                             </button>
                                         </div>
-                                        
-                                        <div class="input-group">
+                                        <div class="send-button">
                                             <button class="btn btn-primary" id="sendNoteBtn">
                                                 <i class="bi bi-send-fill"></i>
                                                 ارسال
                                             </button>
-                                            <input type="text" class="form-control" id="noteInput" placeholder="یادداشت داخلی خود را بنویسید...">
+                                        </div>
+                                                                                    
                                         </div>
                                     </div>
                                 </div>

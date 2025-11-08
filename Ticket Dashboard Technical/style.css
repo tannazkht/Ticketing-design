@@ -78,7 +78,7 @@
 }
 
 .sidebar-right .nav-link.active {
-  background-color: #707fdd;
+  background-color: lightgray;
   color: white;
 }
 
@@ -90,11 +90,16 @@
     padding: 5%;
 }
 .company-image {
-  margin-bottom: 75%;
+  /* margin-bottom: 75%; */
   display: flex;
   flex-direction: column;
-  margin-right: 5%;
-  margin-top: 25%;
+  /* margin-right: 5%; */
+  margin-top: 5%;
+  /* border-top: 1px solid lightgray; */
+  padding-top: 8%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 .company-image span {
   color: gray;
@@ -185,10 +190,9 @@
             flex-direction: column;
             /* position: fixed; */
         }
-        .search-bar {
-            /* position: relative; */
+        .search-bar input{
+            width: 150%;
         }
-
         .search-bar i {
             position: absolute;
             /* right: 2px; */
@@ -205,6 +209,10 @@
             align-items: center;
             justify-content: space-between;
         }
+        /* .header i {
+            position: absolute;
+            right: 12%;
+        } */
 
         .user-section {
             display: flex;
@@ -299,7 +307,7 @@
         }
 
         .btn-primary {
-            background-color: #707fdd;
+            background-color: #2568e6;
             color: white;
             border: none;
             padding: 12px 24px;
@@ -441,7 +449,10 @@
             /* align-items: flex-start; */
             margin-bottom: 12px;
         }
-
+        .ticket-bottom {
+            display: flex;
+            justify-content: space-between;  
+        }
         .right-side-details {
             direction: rtl;
         }
