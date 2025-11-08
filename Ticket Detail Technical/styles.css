@@ -388,9 +388,20 @@ body {
 
 .header-actions {
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.header-actions .return-button {
+  width: 90px;
+  margin: 2% 0;
+}
+
+.ticket-detail-return-button {
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
 }
 
 .action-buttons {
@@ -543,10 +554,10 @@ body {
 }
 
 .problem-description {
-  background: #f6f6fb;
   padding: 15px;
   border-radius: 8px;
   margin-bottom: 20px;
+  border: 1px solid lightgray;
 }
 
 .problem-description p {
@@ -556,6 +567,13 @@ body {
 }
 
 /* Comments Section */
+
+.detail-content {
+  border: 1px solid lightgray;
+  padding: 2%;
+  border-radius: 10px;
+}
+
 .comments-section {
   margin-top: 20px;
 }

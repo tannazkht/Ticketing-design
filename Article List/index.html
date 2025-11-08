@@ -29,16 +29,16 @@
             </div>
         </div>
         <div class="header-right">
-            <div class="notification-icon">
-                <i class="bi bi-bell" style="font-size: 20px;"></i>
-                <span class="notification-badge"></span>
-            </div>
             <div class="user-dropdown">
-                <i class="bi bi-chevron-down" style="font-size: 14px; color: #878790;"></i>
-                <span style="font-size: 14px; color: #273240;">حساب کاربری</span>
                 <div class="user-avatar">
                     <img src="https://i.pravatar.cc/150?img=1" alt="User" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
                 </div>
+                <span style="font-size: 14px; color: #273240;">حساب کاربری</span>
+                <i class="bi bi-chevron-down" style="font-size: 14px; color: #878790;"></i>
+            </div>
+            <div class="notification-icon">
+                <i class="bi bi-bell" style="font-size: 20px;"></i>
+                <span class="notification-badge"></span>
             </div>
         </div>
         
@@ -115,10 +115,6 @@
             </div>
             
 
-
-
-
-
             <!-- Tabs -->
              <div class="tabs">
                 <div class="custom-tabs">
@@ -127,23 +123,18 @@
                 </div>
              </div>
 
-            
-
-
-
-
 
             <!-- Content Card -->
             <div class="content-card">
                 <!-- Action Bar -->
                 <div class="action-bar">
                     <button class="btn-new-article">
-                        <i class="bi bi-plus-lg"></i>
+                        <i class="bi bi-plus-lg" style="border: 1px solid white; padding: 2px 3px 0 3px; border-radius: 3px;;"></i>
                         <span>مقاله جدید</span>
                     </button>
                     
                     <div class="filters">
-                        <select class="filter-dropdown">
+                        <select class="filter-dropdown" style="direction: rtl; color: #0080c9;">
                             <option>وضعیت</option>
                             <option>درحال بررسی</option>
                             <option>بررسی شده</option>
@@ -153,6 +144,9 @@
                         </button>
                         <input type="text" class="filter-input" placeholder="تا تاریخ" style="min-width: 140px;">
                         <span style="color: #878790; display: flex; align-items: center; font-size: 23px;"><i class="bi bi-arrow-left-short"></i></span>
+                        <button class="filter-input" style="background-color: #ffffff; cursor: pointer; border: 1px solid #e5e5e5;">
+                            <i class="bi bi-calendar3"></i>
+                        </button>
                         <input type="text" class="filter-input" placeholder="از تاریخ" style="min-width: 140px;">
                         <button class="filter-input" style="background-color: #ffffff; cursor: pointer; border: 1px solid #e5e5e5;">
                             <i class="bi bi-search"></i>
@@ -162,7 +156,7 @@
                 </div>
                 
                 <!-- Table -->
-                <table class="articles-table">
+                <table class="articles-table table-striped">
                     <thead>
                         <tr>
                             <th style="width: 60px;">عملیات</th>
@@ -515,7 +509,6 @@
                 
                 <!-- Pagination -->
                 <div class="pagination-wrapper">
-                    <!-- <div class="pagination-info">نمایش</div> -->
                     <div class="pagination-controls">
                         <span style="font-size: 14px; color: #878790;">نمایش</span>
                         <select class="pagination-select">
@@ -533,7 +526,7 @@
     
     <!-- Footer -->
     <div class="footer">
-        کلیه حقوق مادی و معنوی متعلق به شرکت راهبرد سیستم استخدام میباشد
+        کلیه حقوق مادی و معنوی متعلق به شرکت راهبرد سیستم ایساتیس میباشد
     </div>
     
     <!-- Bootstrap 5 JS Bundle -->
