@@ -84,7 +84,7 @@
         
         .search-icon {
             position: absolute;
-            right: 3px;
+            left: 10px;
             top: 55%;
             transform: translateY(-50%);
             color: #878790;
@@ -230,14 +230,13 @@
             align-items: center;
             gap: 8px;
             margin-bottom: 24px;
-            border: 1px solid lightgray;
             border-radius: 30px;
             width: 20%;
             background-color: #f6f6fb;
         }
         
         .custom-tab {
-            padding: 14px 24px;
+            padding: 12px 24px;
             background-color: transparent;
             border: none;
             color: #878790;
@@ -306,6 +305,15 @@
             flex: 1;
             justify-content: flex-end;
         }
+
+        .search-icon-2, .calendar3 {
+            position: relative;
+            left: 35px;
+            display: flex;
+            align-items: center;
+            color: gray;
+        }
+
         
         .filter-dropdown {
             min-width: 140px;

@@ -1,14 +1,19 @@
-        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap');
+        /* @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap'); */
+
+        @font-face {
+            font-family: iranSans;
+            src: url(/irsansb.ttf) format(".ttf");
+        }
         
         * {
             font-family: 'Vazirmatn', sans-serif;
         }
         
         body {
-            background-color: #f6f6fb;
             min-height: 100vh;
             position: relative;
             overflow-x: hidden;
+            font-family: iranSans;
         }
         
         /* Logo Section */
@@ -38,15 +43,13 @@
         }
         
         .login-card {
-            /* background: #ffffff; */
             border-radius: 16px;
-            /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); */
             border: 1px solid lightgray;
             padding: 50px 60px;
             max-width: 540px;
             width: 100%;
         }
-        
+
         .login-title {
             font-size: 28px;
             font-weight: 600;
@@ -56,7 +59,7 @@
         }
         
         .login-subtitle {
-            font-size: 15px;
+            font-size: 17px;
             font-weight: 400;
             color: #878787;
             text-align: center;
@@ -76,17 +79,24 @@
             margin-bottom: 24px;
             border-radius: 10px;
             width: 100%;
+            position: relative;
+
         }
-        /* .bi-person, .bi-lock {
+        .input-group input {
+            background-color: white;
+        }
+
+        .bi-person, .bi-lock {
             font-size: 27px;
             color: lightgray;
-            position: relative;
-            right: 25px;
+            position: absolute;
             z-index: 1;
             display: flex;
             align-items: center;
             padding-right: 5px;
-        } */
+            top: 9px;
+        }
+
         .form-control {
             border: 1px solid #dee2e6;
             border-radius: 8px;
@@ -202,36 +212,6 @@
         .btn-login:hover {
             background-color: #006ba6;
         }
-        
-        /* Decorative Question Marks 
-        .decorative-questions {
-            position: fixed;
-            bottom: 40px;
-            left: 40px;
-            display: flex;
-            gap: 20px;
-            opacity: 0.15;
-        }
-        
-        .question-mark {
-            font-size: 80px;
-            color: #407bff;
-            font-weight: 300;
-            transform: rotate(-15deg);
-        }
-        
-        .question-mark:nth-child(2) {
-            font-size: 60px;
-            transform: rotate(10deg);
-            margin-top: 30px;
-        }
-        
-        .question-mark:nth-child(3) {
-            font-size: 40px;
-            transform: rotate(-20deg);
-            margin-top: 60px;
-        }
-        */
 
         .questions {
             direction: ltr;

@@ -10,10 +10,15 @@
     
     <!-- Vazirmatn Font -->
     <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
-    
+
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./style.css">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+
 
 </head>
 <body>
@@ -25,20 +30,21 @@
         </div>
 
         <div class="search-bar position-relative">
-            <input type="text" class="form-control" placeholder="جستجو">
             <i class="bi bi-search search-icon"></i>
+            <input type="text" class="form-control" placeholder="جستجو">
         </div>
                  
         <div class="user-section">
             <div class="notification-badge">
-                <i class="bi bi-bell" style="color: #a6abc8; font-size: 20px;"></i>
+                <i class="bi bi-bell-fill" style="color: #a6abc8; font-size: 20px;"></i>
             </div>
-            <span style="color: #273240; font-size: 14px; font-weight: 500;">حساب کاربری</span>
             <img src="https://i.pravatar.cc/80?img=33" alt="User" class="user-avatar">
-            <i class="bi bi-chevron-down" style="color: #a6abc8; font-size: 14px;"></i>
+            <div class="username-post">
+                <p class="user-name">ماهان یکتا</p>
+                <span class="post">کارشناس فروش</span>
+            </div>
+            <i class="bi bi-chevron-down" style="color: #000000; font-size: 14px;"></i>
         </div>
-        
-
     </header>
 
     <!-- Sidebar -->
@@ -113,7 +119,7 @@
                 <span>تیکت های جدید</span>
                 <span class="icon"><i class="bi bi-exclamation-circle" style="color: lightskyblue"></i></span>
             </div>
-            <div class="stat-number blue">۴</div>
+            <div class="stat-number" style="color: #0080c9;">۴</div>
         </div>
 
         <div class="stat-card">
@@ -126,7 +132,7 @@
         <div class="stat-card">
             <div class="stat-header">
                 <span>حل شده</span>
-                <span class="icon"><i class="bi bi-check2-circle" style="color: green"></i></span>
+                <span class="icon"><i class="bi bi-check2-circle" style="color: lightgreen;"></i></span>
             </div>
             <div class="stat-number green">۸</div>
         </div>
@@ -143,22 +149,16 @@
         <!-- Filter Section -->
         <div class="filter-section">
             <div class="filter-row">
-
-                
-                <input type="text" class="filter-input" placeholder="جستجو" style="flex: 1; min-width: 200px;">
-                
+                <input type="text" class="filter-input search-input" placeholder="جستجو">
+                    <i class="bi bi-search search-icon-2"></i>
                 <input type="text" class="filter-input" placeholder="از تاریخ" style="width: 150px;">
-                
+                  <i class="bi bi-calendar4"></i>
                 <span class="date-separator">
                     <i class="bi bi-arrow-left"></i>
                 </span>
-                
                 <input type="text" class="filter-input" placeholder="تا تاریخ" style="width: 150px;">
-
-                <button class="btn" style="background-color: #ffffff; border: 1px solid #e4e8eb; border-radius: 8px; padding: 8px 16px;">
-                    <i class="bi bi-calendar3"></i>
-                </button>
-                <select class="filter-input" style="width: 150px;">
+                  <i class="bi bi-calendar4"></i>
+                <select class="filter-input" style="width: 150px; color: dodgerblue;">
                     <option>وضعیت</option>
                     <option>دریافت پرسش</option>
                     <option>منتظر</option>
@@ -191,185 +191,185 @@
                 <tbody>
                     <tr>
                         <td><input type="checkbox" class="custom-checkbox"></td>
-                        <td>#FT2024001</td>
+                        <td>#T-۲۰۲۴-۰۰۱</td>
                         <td>کندی آپلود</td>
                         <td>امیر رجبی</td>
-                        <td><i class="bi bi-emoji-expressionless" style="color: gray;"></i></td>
+                        <td><i class="bi bi-emoji-expressionless" style="color: lightgray;"></i></td>
                         <td>DMS</td>
                         <td><span class="status-badge status-rejected">رد</span></td>
-                        <td>1406/03/06</td>
-                        <td>09112680300</td>
-                        <td>14:20</td>
-                        <td><span class="status-badge status-received">دریافت پرسش</span></td>
+                        <td>۱۴۰۴/۰۳/۰۶</td>
+                        <td>۰۹۹۱۲۶۸۰۳۰۰</td>
+                        <td>۱۴:۲۰</td>
+                        <td><span class="status-badge status-received">در حال بررسی</span></td>
                     </tr>
                     <tr>
                         <td><input type="checkbox" class="custom-checkbox"></td>
-                        <td>#FT2024001</td>
+                        <td>#T-۲۰۲۴-۰۰۱</td>
                         <td>کندی آپلود</td>
                         <td>امیر رجبی</td>
-                        <td><i class="bi bi-emoji-expressionless" style="color: gray;"></i></i></td>
+                        <td><i class="bi bi-emoji-expressionless" style="color: lightgray;"></i></i></td>
                         <td>DMS</td>
                         <td><span class="status-badge status-waiting">منتظر</span></td>
-                        <td>1406/03/06</td>
-                        <td>09112680300</td>
-                        <td>14:20</td>
-                        <td><span class="status-badge status-received">دریافت پرسش</span></td>
+                        <td>۱۴۰۴/۰۳/۰۶</td>
+                        <td>۰۹۹۱۲۶۸۰۳۰۰</td>
+                        <td>۱۴:۲۰</td>
+                        <td><span class="status-badge status-received">در حال بررسی</span></td>
                     </tr>
                     <tr>
                         <td><input type="checkbox" class="custom-checkbox"></td>
-                        <td>#FT2024001</td>
+                        <td>#T-۲۰۲۴-۰۰۱</td>
                         <td>کندی آپلود</td>
                         <td>امیر رجبی</td>
-                        <td><i class="bi bi-emoji-smile" style="color: green;"></i></i></td>
+                        <td><i class="bi bi-emoji-smile" style="color: #07A75D;"></i></i></td>
                         <td>DMS</td>
                         <td><span class="status-badge status-reviewed">تکمیل</span></td>
-                        <td>1406/03/06</td>
-                        <td>09112680300</td>
-                        <td>14:20</td>
-                        <td><span class="status-badge status-received">دریافت پرسش</span></td>
+                        <td>۱۴۰۴/۰۳/۰۶</td>
+                        <td>۰۹۹۱۲۶۸۰۳۰۰</td>
+                        <td>۱۴:۲۰</td>
+                        <td><span class="status-badge status-received">در حال بررسی</span></td>
                     </tr>
                     <tr>
                         <td><input type="checkbox" class="custom-checkbox"></td>
-                        <td>#FT2024001</td>
+                        <td>#T-۲۰۲۴-۰۰۱</td>
                         <td>کندی آپلود</td>
                         <td>امیر رجبی</td>
                         <td><i class="bi bi-emoji-frown" style="color: orange;"></i></i></td>
                         <td>DMS</td>
                         <td><span class="status-badge status-waiting">منتظر</span></td>
-                        <td>1406/03/06</td>
-                        <td>09112680300</td>
-                        <td>14:20</td>
-                        <td><span class="status-badge status-received">دریافت پرسش</span></td>
+                        <td>۱۴۰۴/۰۳/۰۶</td>
+                        <td>۰۹۹۱۲۶۸۰۳۰۰</td>
+                        <td>۱۴:۲۰</td>
+                        <td><span class="status-badge status-received">در حال بررسی</span></td>
                     </tr>
                     <tr>
                         <td><input type="checkbox" class="custom-checkbox"></td>
-                        <td>#FT2024001</td>
+                        <td>#T-۲۰۲۴-۰۰۱</td>
                         <td>کندی آپلود</td>
                         <td>امیر رجبی</td>
-                        <td><i class="bi bi-emoji-smile" style="color: green;"></i></i></td>
+                        <td><i class="bi bi-emoji-smile" style="color: #07A75D;"></i></i></td>
                         <td>DMS</td>
                         <td><span class="status-badge status-waiting">منتظر</span></td>
-                        <td>1406/03/06</td>
-                        <td>09112680300</td>
-                        <td>14:20</td>
-                        <td><span class="status-badge status-received">دریافت پرسش</span></td>
+                        <td>۱۴۰۴/۰۳/۰۶</td>
+                        <td>۰۹۹۱۲۶۸۰۳۰۰</td>
+                        <td>۱۴:۲۰</td>
+                        <td><span class="status-badge status-received">در حال بررسی</span></td>
                     </tr>
                     <tr>
                         <td><input type="checkbox" class="custom-checkbox"></td>
-                        <td>#FT2024001</td>
+                        <td>#T-۲۰۲۴-۰۰۱</td>
                         <td>کندی آپلود</td>
                         <td>امیر رجبی</td>
                         <td><i class="bi bi-emoji-angry" style="color: red"></i></i></td>
                         <td>DMS</td>
                         <td><span class="status-badge status-waiting">منتظر</span></td>
-                        <td>1406/03/06</td>
-                        <td>09112680300</td>
-                        <td>14:20</td>
+                        <td>۱۴۰۴/۰۳/۰۶</td>
+                        <td>۰۹۹۱۲۶۸۰۳۰۰</td>
+                        <td>۱۴:۲۰</td>
                         <td><span class="status-badge status-reviewed">بررسی شده</span></td>
                     </tr>
                     <tr>
                         <td><input type="checkbox" class="custom-checkbox"></td>
-                        <td>#FT2024001</td>
+                        <td>#T-۲۰۲۴-۰۰۱</td>
                         <td>کندی آپلود</td>
                         <td>امیر رجبی</td>
-                        <td><i class="bi bi-emoji-smile" style="color: green;"></i></i></td>
+                        <td><i class="bi bi-emoji-smile" style="color: #07A75D;"></i></i></td>
                         <td>DMS</td>
                         <td><span class="status-badge status-waiting">منتظر</span></td>
-                        <td>1406/03/06</td>
-                        <td>09112680300</td>
-                        <td>14:20</td>
-                        <td><span class="status-badge status-received">دریافت پرسش</span></td>
+                        <td>۱۴۰۴/۰۳/۰۶</td>
+                        <td>۰۹۹۱۲۶۸۰۳۰۰</td>
+                        <td>۱۴:۲۰</td>
+                        <td><span class="status-badge status-received">در حال بررسی</span></td>
                     </tr>
                     <tr>
                         <td><input type="checkbox" class="custom-checkbox"></td>
-                        <td>#FT2024001</td>
+                        <td>#T-۲۰۲۴-۰۰۱</td>
                         <td>کندی آپلود</td>
                         <td>امیر رجبی</td>
-                        <td><i class="bi bi-emoji-smile" style="color: green;"></i></td>
+                        <td><i class="bi bi-emoji-smile" style="color: #07A75D;"></i></td>
                         <td>DMS</td>
                         <td><span class="status-badge status-reviewed">بررسی شده</span></td>
-                        <td>1406/03/06</td>
-                        <td>09112680300</td>
-                        <td>14:20</td>
-                        <td><span class="status-badge status-received">دریافت پرسش</span></td>
+                        <td>۱۴۰۴/۰۳/۰۶</td>
+                        <td>۰۹۹۱۲۶۸۰۳۰۰</td>
+                        <td>۱۴:۲۰</td>
+                        <td><span class="status-badge status-received">در حال بررسی</span></td>
                     </tr>
                     <tr>
                         <td><input type="checkbox" class="custom-checkbox"></td>
-                        <td>#FT2024001</td>
+                        <td>#T-۲۰۲۴-۰۰۱</td>
                         <td>کندی آپلود</td>
                         <td>امیر رجبی</td>
-                        <td><i class="bi bi-emoji-smile" style="color: green;"></i></td>
+                        <td><i class="bi bi-emoji-smile" style="color: #07A75D;"></i></td>
                         <td>DMS</td>
                         <td><span class="status-badge status-waiting">منتظر</span></td>
-                        <td>1406/03/06</td>
-                        <td>09112680300</td>
-                        <td>14:20</td>
-                        <td><span class="status-badge status-received">دریافت پرسش</span></td>
+                        <td>۱۴۰۴/۰۳/۰۶</td>
+                        <td>۰۹۹۱۲۶۸۰۳۰۰</td>
+                        <td>۱۴:۲۰</td>
+                        <td><span class="status-badge status-received">در حال بررسی</span></td>
                     </tr>
                     <tr>
                         <td><input type="checkbox" class="custom-checkbox"></td>
-                        <td>#FT2024001</td>
+                        <td>#T-۲۰۲۴-۰۰۱</td>
                         <td>کندی آپلود</td>
                         <td>امیر رجبی</td>
-                        <td><i class="bi bi-emoji-smile" style="color: green;"></i></td>
+                        <td><i class="bi bi-emoji-smile" style="color: #07A75D;"></i></td>
                         <td>DMS</td>
                         <td><span class="status-badge status-waiting">منتظر</span></td>
-                        <td>1406/03/06</td>
-                        <td>09112680300</td>
-                        <td>14:20</td>
-                        <td><span class="status-badge status-received">دریافت پرسش</span></td>
+                        <td>۱۴۰۴/۰۳/۰۶</td>
+                        <td>۰۹۹۱۲۶۸۰۳۰۰</td>
+                        <td>۱۴:۲۰</td>
+                        <td><span class="status-badge status-received">در حال بررسی</span></td>
                     </tr>
                     <tr>
                         <td><input type="checkbox" class="custom-checkbox"></td>
-                        <td>#FT2024001</td>
+                        <td>#T-۲۰۲۴-۰۰۱</td>
                         <td>کندی آپلود</td>
                         <td>امیر رجبی</td>
-                        <td><i class="bi bi-emoji-smile" style="color: green;"></i></td>
+                        <td><i class="bi bi-emoji-smile" style="color: #07A75D;"></i></td>
                         <td>DMS</td>
                         <td><span class="status-badge status-waiting">منتظر</span></td>
-                        <td>1406/03/06</td>
-                        <td>09112680300</td>
-                        <td>14:20</td>
-                        <td><span class="status-badge status-received">دریافت پرسش</span></td>
+                        <td>۱۴۰۴/۰۳/۰۶</td>
+                        <td>۰۹۹۱۲۶۸۰۳۰۰</td>
+                        <td>۱۴:۲۰</td>
+                        <td><span class="status-badge status-received">در حال بررسی</span></td>
                     </tr>
                     <tr>
                         <td><input type="checkbox" class="custom-checkbox"></td>
-                        <td>#FT2024001</td>
+                        <td>#T-۲۰۲۴-۰۰۱</td>
                         <td>کندی آپلود</td>
                         <td>امیر رجبی</td>
-                        <td><i class="bi bi-emoji-smile" style="color: green;"></i></td>
+                        <td><i class="bi bi-emoji-smile" style="color: #07A75D;"></i></td>
                         <td>DMS</td>
                         <td><span class="status-badge status-waiting">منتظر</span></td>
-                        <td>1406/03/06</td>
-                        <td>09112680300</td>
-                        <td>14:20</td>
-                        <td><span class="status-badge status-received">دریافت پرسش</span></td>
+                        <td>۱۴۰۴/۰۳/۰۶</td>
+                        <td>۰۹۹۱۲۶۸۰۳۰۰</td>
+                        <td>۱۴:۲۰</td>
+                        <td><span class="status-badge status-received">در حال بررسی</span></td>
                     </tr>
                     <tr>
                         <td><input type="checkbox" class="custom-checkbox"></td>
-                        <td>#FT2024001</td>
+                        <td>#T-۲۰۲۴-۰۰۱</td>
                         <td>کندی آپلود</td>
                         <td>امیر رجبی</td>
-                        <td><i class="bi bi-emoji-smile" style="color: green;"></i></td>
+                        <td><i class="bi bi-emoji-smile" style="color: #07A75D;"></i></td>
                         <td>DMS</td>
                         <td><span class="status-badge status-waiting">منتظر</span></td>
-                        <td>1406/03/06</td>
-                        <td>09112680300</td>
-                        <td>14:20</td>
+                        <td>۱۴۰۴/۰۳/۰۶</td>
+                        <td>۰۹۹۱۲۶۸۰۳۰۰</td>
+                        <td>۱۴:۲۰</td>
                         <td><span class="status-badge status-reviewed">بررسی شده</span></td>
                     </tr>
                     <tr>
                         <td><input type="checkbox" class="custom-checkbox"></td>
-                        <td>#FT2024001</td>
+                        <td>#T-۲۰۲۴-۰۰۱</td>
                         <td>کندی آپلود</td>
                         <td>امیر رجبی</td>
-                        <td><i class="bi bi-emoji-smile" style="color: green;"></i></td>
+                        <td><i class="bi bi-emoji-smile" style="color: #07A75D;"></i></td>
                         <td>DMS</td>
                         <td><span class="status-badge status-waiting">منتظر</span></td>
-                        <td>1406/03/06</td>
-                        <td>09112680300</td>
-                        <td>14:20</td>
-                        <td><span class="status-badge status-received">دریافت پرسش</span></td>
+                        <td>۱۴۰۴/۰۳/۰۶</td>
+                        <td>۰۹۹۱۲۶۸۰۳۰۰</td>
+                        <td>۱۴:۲۰</td>
+                        <td><span class="status-badge status-received">در حال بررسی</span></td>
                     </tr>
                 </tbody>
             </table>
@@ -397,5 +397,9 @@
 
     <!-- Bootstrap 5 JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- font awsome -->
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+
 </body>
 </html>
