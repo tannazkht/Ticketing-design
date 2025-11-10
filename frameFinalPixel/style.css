@@ -45,7 +45,9 @@ body {
 }
 
 .mainContent {
-  margin-left: 10%;
+  position: relative;
+  left: 3%;
+  width: 100%;
 }
 
 /* .leftSection .navbar {
@@ -448,6 +450,7 @@ body {
             color: #273240;
             display: flex;
             justify-content: flex-start;
+            padding-top: 35%;
         }
 
         .stat-number.blue {
@@ -659,7 +662,6 @@ body {
             color: #a6abc8;
             font-size: 13px;
             background-color: #ffffff;
-            border-top: 1px solid #e5e5e5;
             margin-right: 240px;
         }
         
