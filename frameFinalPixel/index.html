@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>درباره ما | Estino Soft</title>
+  <title>استینو سافت</title>
   <link rel="stylesheet" href="reset.css"> 
   <link rel="stylesheet" href="style.css"> 
   
@@ -12,110 +12,420 @@
 
 </head>
 <body>
-  <div class="container">
-    <!-- sidebar -->
-    <div class="sidebar">
+
+
+
+
+
+  <div class="container d-flex">
+    <div class="rightSection">
+      <!-- side bar -->
+
+
+          <div class="sidebar">
       <div class="logo">
-        <img src="src/logo/estinoSoftLogo.svg" alt="Estino Soft Logo">
+        <a href="#">
+          <img src="src/logo/estinoSoftLogo.svg" alt="Estino Soft Logo">
+        </a>
       </div>
       <div class="menu">
         <p class="menu-title">منو</p>
-        <div class="menu-item">
+
+
+        <a href="#" class="menu-item">
           <img class="icon" src="src/icons/dashboard.svg" alt="dashboard icon">
           <span class="menu-text">داشبورد</span>
-        </div>
-        <div class="menu-item">
+        </a>
+        <a href="#" class="menu-item">
           <img class="icon" src="src/icons/Buy.svg" alt="buy icon">
           <span class="menu-text">تیکت ها</span>
-        </div>
-        <div class="menu-item">
+        </a>
+        <a href="#" class="menu-item">
           <img class="icon" src="src/icons/newTicket.svg" alt="dashboard icon">
           <span class="menu-text">تیکت جدید</span>
-        </div>
-        <div class="menu-item">
+        </a>
+        <a href="#" class="menu-item">
           <img class="icon" src="src/icons/messages.svg" alt="dashboard icon">
           <span class="menu-text">پیام ها </span>
-        </div>
-        <div class="menu-item">
+        </a>
+        <a href="#" class="menu-item">
           <img class="icon" src="src/icons/messages.svg" alt="dashboard icon">
           <span class="menu-text">پایگاه دانش</span>
-        </div>
-
-
+        </a>
 
         <div class="others">
           <span>OTHERS</span>
         </div>
 
-
-
         <div id="account-separator-placeholder"></div>
 
-
-        <div class="menu-item account-item" data-key="account">
+        <a href="#" class="menu-item account-item" data-key="account">
+          <img class="icon" src="src/icons/Setting.svg" alt="Setting icon">
           <span class="menu-text">تنظیمات</span>
-        </div>       
+        </a>       
         <div id="account-area-placeholder"></div>
-        <div class="menu-item">
+        <a href="#" class="menu-item">
           <img class="icon" src="src/icons/Profile.svg" alt="dashboard icon">
           <span class="menu-text">حساب من</span>
-        </div>
-        <div class="menu-item">
+        </a>
+        <a href="#" class="menu-item">
           <img class="icon" src="src/icons/help.svg" alt="dashboard icon">
           <span class="menu-text">کمک</span>
-        </div>
+        </a>
       </div>
       
       <footer class="sidebar-footer"> </footer>
 
 
-      <div class="logo-image">
+      <a href="#" class="logo-image">
         <img src="./Vector.svg" alt="logo image">
         <p>نسخه 3.4.15</p>
+      </a>
+    </div>
+
+
+    </div>
+    <div class="leftSection">
+      <div class="navbar">
+
+        <!-- navbar -->
+
+        <header class="topbar">
+          <div class="search-box"> 
+            <input class="textSearchBox" type="text" placeholder="جستجو ...">
+            <img src="src/icons/search.svg" alt="search icon">
+          </div>
+          <div class="topbar-right">
+            <div class="notification">
+              <img src="src/icons/bell.svg" alt="notification icon"> 
+              <span class="notifSign"></span>
+            </div>
+            <div class="user-profile">
+              <img class="user-avatar" src="src/images/user1.jpg" alt="user avatar"> 
+              <div class="user-info">
+                <span class="user-name">ماهان یکتا</span>
+                <span class="user-role">کارشناس فروش</span>
+              </div>
+              <img class="dropdown-icon" src="src/icons/chevron-down.svg" alt="dropdown icon"> 
+            </div>
+          </div>
+        </header>
+
+
+      </div>
+      <div class="mainContent">
+
+        <!-- main content -->
+
+
+        
+
+        <!-- Stats Cards -->
+      <div class="stats-grid">
+        <div class="stat-card">
+            <div class="stat-header">
+                <span>کل تیکت ها</span>
+                <span class="icon"><i class="bi bi-ticket-perforated" style="color: gray;"></i></span>
+            </div>
+            <div class="stat-number">۲۴</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-header">
+                <span>تیکت های جدید</span>
+                <span class="icon"><i class="bi bi-exclamation-circle" style="color: lightskyblue"></i></span>
+            </div>
+            <div class="stat-number" style="color: #0080c9;">۴</div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-header">
+                <span>درحال بررسی</span>
+                <span class="icon"><i class="bi bi-clock-history" style="color: orange"></i></span>
+            </div>
+            <div class="stat-number orange">۱۵</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-header">
+                <span>حل شده</span>
+                <span class="icon"><i class="bi bi-check2-circle" style="color: lightgreen;"></i></span>
+            </div>
+            <div class="stat-number green">۸</div>
+        </div>
       </div>
 
 
 
 
 
-      <!-- <div class="chat-container">
-        <img class="chat-bg" src="src/icons/chat.svg" alt="chat background">
-        <img class="chat chat-fg" src="src/icons/messageTyping.svg" alt="chat typing">
-      </div>  -->
-    </div>
-    <div class="main-content">
-      <header class="topbar">
-        <div class="search-box"> 
-          <input class="textSearchBox" type="text" placeholder="جستجو ...">
-          <img src="src/icons/search.svg" alt="search icon">
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="page-header">
+            <h1 class="page-title">تیکت های اخیر</h1>
         </div>
-        <div class="topbar-right">
-          <div class="notification">
-            <img src="src/icons/bell.svg" alt="notification icon"> 
-            <span class="notifSign"></span>
-          </div>
-          <div class="user-profile">
-            <img class="user-avatar" src="src/images/user1.jpg" alt="user avatar"> 
-            <div class="user-info">
-              <span class="user-name">ماهان یکتا</span>
-              <span class="user-role">کارشناس فروش</span>
+
+        <!-- Filter Section -->
+        <div class="filter-section">
+            <div class="filter-row">
+                <input type="text" class="filter-input search-input" placeholder="جستجو">
+                    <i class="bi bi-search search-icon-2"></i>
+                <input type="text" class="filter-input" placeholder="از تاریخ" style="width: 150px;">
+                  <i class="bi bi-calendar4"></i>
+                <span class="date-separator">
+                    <i class="bi bi-arrow-left"></i>
+                </span>
+                <input type="text" class="filter-input" placeholder="تا تاریخ" style="width: 150px;">
+                  <i class="bi bi-calendar4"></i>
+                <select class="filter-input" style="width: 150px; color: dodgerblue;">
+                    <option>وضعیت</option>
+                    <option>دریافت پرسش</option>
+                    <option>منتظر</option>
+                    <option>رد</option>
+                    <option>بررسی شده</option>
+                </select>
             </div>
-            <img class="dropdown-icon" src="src/icons/chevron-down.svg" alt="dropdown icon"> 
-          </div>
         </div>
-      </header>
-      <div class="header-line"></div>
-      <div class="footer-line"></div>
+
+        <!-- Table -->
+        <div class="table-container">
+            <table class="table custom-table table-striped" style="width:100%;">
+                <thead>
+                    <tr>
+                        <th style="width: 40px;">
+                            <input type="checkbox" class="custom-checkbox">
+                        </th>
+                        <th>شناسه</th>
+                        <th>عنوان</th>
+                        <th>مشتری</th>
+                        <th>احساس کاربر</th>
+                        <th>محصول</th>
+                        <th>اولویت</th>
+                        <th>تاریخ ثبت</th>
+                        <th>شماره تماس</th>
+                        <th>زمان ثبت</th>
+                        <th>وضعیت</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="checkbox" class="custom-checkbox"></td>
+                        <td class="id">#T-۲۰۲۴-۰۰۱</td>
+                        <td>کندی آپلود</td>
+                        <td>امیر رجبی</td>
+                        <td><i class="bi bi-emoji-expressionless" style="color: lightgray;"></i></td>
+                        <td>DMS</td>
+                        <td><span class="status-badge status-rejected">رد</span></td>
+                        <td>۱۴۰۴/۰۳/۰۶</td>
+                        <td>۰۹۹۱۲۶۸۰۳۰۰</td>
+                        <td>۱۴:۲۰</td>
+                        <td><span class="status-badge status-received">در حال بررسی</span></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="custom-checkbox"></td>
+                        <td class="id">#T-۲۰۲۴-۰۰۱</td>
+                        <td>کندی آپلود</td>
+                        <td>امیر رجبی</td>
+                        <td><i class="bi bi-emoji-expressionless" style="color: lightgray;"></i></i></td>
+                        <td>DMS</td>
+                        <td><span class="status-badge status-waiting">منتظر</span></td>
+                        <td>۱۴۰۴/۰۳/۰۶</td>
+                        <td>۰۹۹۱۲۶۸۰۳۰۰</td>
+                        <td>۱۴:۲۰</td>
+                        <td><span class="status-badge status-received">در حال بررسی</span></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="custom-checkbox"></td>
+                        <td class="id">#T-۲۰۲۴-۰۰۱</td>
+                        <td>کندی آپلود</td>
+                        <td>امیر رجبی</td>
+                        <td><i class="bi bi-emoji-smile" style="color: #07A75D;"></i></i></td>
+                        <td>DMS</td>
+                        <td><span class="status-badge status-reviewed">تکمیل</span></td>
+                        <td>۱۴۰۴/۰۳/۰۶</td>
+                        <td>۰۹۹۱۲۶۸۰۳۰۰</td>
+                        <td>۱۴:۲۰</td>
+                        <td><span class="status-badge status-received">در حال بررسی</span></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="custom-checkbox"></td>
+                        <td class="id">#T-۲۰۲۴-۰۰۱</td>
+                        <td>کندی آپلود</td>
+                        <td>امیر رجبی</td>
+                        <td><i class="bi bi-emoji-frown" style="color: orange;"></i></i></td>
+                        <td>DMS</td>
+                        <td><span class="status-badge status-waiting">منتظر</span></td>
+                        <td>۱۴۰۴/۰۳/۰۶</td>
+                        <td>۰۹۹۱۲۶۸۰۳۰۰</td>
+                        <td>۱۴:۲۰</td>
+                        <td><span class="status-badge status-received">در حال بررسی</span></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="custom-checkbox"></td>
+                        <td class="id">#T-۲۰۲۴-۰۰۱</td>
+                        <td>کندی آپلود</td>
+                        <td>امیر رجبی</td>
+                        <td><i class="bi bi-emoji-smile" style="color: #07A75D;"></i></i></td>
+                        <td>DMS</td>
+                        <td><span class="status-badge status-waiting">منتظر</span></td>
+                        <td>۱۴۰۴/۰۳/۰۶</td>
+                        <td>۰۹۹۱۲۶۸۰۳۰۰</td>
+                        <td>۱۴:۲۰</td>
+                        <td><span class="status-badge status-received">در حال بررسی</span></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="custom-checkbox"></td>
+                        <td class="id">#T-۲۰۲۴-۰۰۱</td>
+                        <td>کندی آپلود</td>
+                        <td>امیر رجبی</td>
+                        <td><i class="bi bi-emoji-angry" style="color: red"></i></i></td>
+                        <td>DMS</td>
+                        <td><span class="status-badge status-waiting">منتظر</span></td>
+                        <td>۱۴۰۴/۰۳/۰۶</td>
+                        <td>۰۹۹۱۲۶۸۰۳۰۰</td>
+                        <td>۱۴:۲۰</td>
+                        <td><span class="status-badge status-reviewed">بررسی شده</span></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="custom-checkbox"></td>
+                        <td class="id">#T-۲۰۲۴-۰۰۱</td>
+                        <td>کندی آپلود</td>
+                        <td>امیر رجبی</td>
+                        <td><i class="bi bi-emoji-smile" style="color: #07A75D;"></i></i></td>
+                        <td>DMS</td>
+                        <td><span class="status-badge status-waiting">منتظر</span></td>
+                        <td>۱۴۰۴/۰۳/۰۶</td>
+                        <td>۰۹۹۱۲۶۸۰۳۰۰</td>
+                        <td>۱۴:۲۰</td>
+                        <td><span class="status-badge status-received">در حال بررسی</span></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="custom-checkbox"></td>
+                        <td class="id">#T-۲۰۲۴-۰۰۱</td>
+                        <td>کندی آپلود</td>
+                        <td>امیر رجبی</td>
+                        <td><i class="bi bi-emoji-smile" style="color: #07A75D;"></i></td>
+                        <td>DMS</td>
+                        <td><span class="status-badge status-reviewed">بررسی شده</span></td>
+                        <td>۱۴۰۴/۰۳/۰۶</td>
+                        <td>۰۹۹۱۲۶۸۰۳۰۰</td>
+                        <td>۱۴:۲۰</td>
+                        <td><span class="status-badge status-received">در حال بررسی</span></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="custom-checkbox"></td>
+                        <td class="id">#T-۲۰۲۴-۰۰۱</td>
+                        <td>کندی آپلود</td>
+                        <td>امیر رجبی</td>
+                        <td><i class="bi bi-emoji-smile" style="color: #07A75D;"></i></td>
+                        <td>DMS</td>
+                        <td><span class="status-badge status-waiting">منتظر</span></td>
+                        <td>۱۴۰۴/۰۳/۰۶</td>
+                        <td>۰۹۹۱۲۶۸۰۳۰۰</td>
+                        <td>۱۴:۲۰</td>
+                        <td><span class="status-badge status-received">در حال بررسی</span></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="custom-checkbox"></td>
+                        <td class="id">#T-۲۰۲۴-۰۰۱</td>
+                        <td>کندی آپلود</td>
+                        <td>امیر رجبی</td>
+                        <td><i class="bi bi-emoji-smile" style="color: #07A75D;"></i></td>
+                        <td>DMS</td>
+                        <td><span class="status-badge status-waiting">منتظر</span></td>
+                        <td>۱۴۰۴/۰۳/۰۶</td>
+                        <td>۰۹۹۱۲۶۸۰۳۰۰</td>
+                        <td>۱۴:۲۰</td>
+                        <td><span class="status-badge status-received">در حال بررسی</span></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="custom-checkbox"></td>
+                        <td class="id">#T-۲۰۲۴-۰۰۱</td>
+                        <td>کندی آپلود</td>
+                        <td>امیر رجبی</td>
+                        <td><i class="bi bi-emoji-smile" style="color: #07A75D;"></i></td>
+                        <td>DMS</td>
+                        <td><span class="status-badge status-waiting">منتظر</span></td>
+                        <td>۱۴۰۴/۰۳/۰۶</td>
+                        <td>۰۹۹۱۲۶۸۰۳۰۰</td>
+                        <td>۱۴:۲۰</td>
+                        <td><span class="status-badge status-received">در حال بررسی</span></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="custom-checkbox"></td>
+                        <td class="id">#T-۲۰۲۴-۰۰۱</td>
+                        <td>کندی آپلود</td>
+                        <td>امیر رجبی</td>
+                        <td><i class="bi bi-emoji-smile" style="color: #07A75D;"></i></td>
+                        <td>DMS</td>
+                        <td><span class="status-badge status-waiting">منتظر</span></td>
+                        <td>۱۴۰۴/۰۳/۰۶</td>
+                        <td>۰۹۹۱۲۶۸۰۳۰۰</td>
+                        <td>۱۴:۲۰</td>
+                        <td><span class="status-badge status-received">در حال بررسی</span></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="custom-checkbox"></td>
+                        <td class="id">#T-۲۰۲۴-۰۰۱</td>
+                        <td>کندی آپلود</td>
+                        <td>امیر رجبی</td>
+                        <td><i class="bi bi-emoji-smile" style="color: #07A75D;"></i></td>
+                        <td>DMS</td>
+                        <td><span class="status-badge status-waiting">منتظر</span></td>
+                        <td>۱۴۰۴/۰۳/۰۶</td>
+                        <td>۰۹۹۱۲۶۸۰۳۰۰</td>
+                        <td>۱۴:۲۰</td>
+                        <td><span class="status-badge status-reviewed">بررسی شده</span></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="custom-checkbox"></td>
+                        <td class="id">#T-۲۰۲۴-۰۰۱</td>
+                        <td>کندی آپلود</td>
+                        <td>امیر رجبی</td>
+                        <td><i class="bi bi-emoji-smile" style="color: #07A75D;"></i></td>
+                        <td>DMS</td>
+                        <td><span class="status-badge status-waiting">منتظر</span></td>
+                        <td>۱۴۰۴/۰۳/۰۶</td>
+                        <td>۰۹۹۱۲۶۸۰۳۰۰</td>
+                        <td>۱۴:۲۰</td>
+                        <td><span class="status-badge status-received">در حال بررسی</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <!-- Pagination -->
+            <div class="pagination-wrapper"> 
+                <div class="pagination-controls">
+                    <span>نمایش</span>
+                    <select class="page-btn" style="width: auto;">
+                        <option>10</option>
+                        <option>20</option>
+                        <option>50</option>
+                    </select>
+                    <span>از صفحه</span>
+                </div>
+            </div>
+            </div>
 
 
+      </div>
+      <div class="footer">
 
-      <footer class="footer">
-        <p class="footerText">
-          کلیه حقوق مادی و معنوی متعلق به شرکت راهبرد سیستم ایساتیس می‌باشد.
-        </p>
-      </footer>  
-    </div>    
+        <!-- footer -->
+
+
+        <footer class="footer">
+          <p class="footerText">
+            کلیه حقوق مادی و معنوی متعلق به شرکت راهبرد سیستم ایساتیس می‌باشد.
+          </p>
+        </footer>  
+
+
+      </div>
+    </div>
   </div>
+
+        
+
 </body>
 <script src="script.js"></script>
 </html>

@@ -566,9 +566,9 @@ body {
   position: relative;
 }
 
-/* .comment-reply img {
-  direction: rtl;
-} */
+.comment-reply {
+  direction: ltr;
+}
 
 .comment-reply-content {
   padding: 12px 16px;

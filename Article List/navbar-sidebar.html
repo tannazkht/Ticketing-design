@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../ticketing-project/style/style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+
+
+        <section class="d-flex" style="height: 100%;">
+            <!-- Right Sidebar -->
+            <div class="col-auto sidebar-right bg-light border-end">
+                <div class="d-flex flex-column h-100">
+                    <!-- Logo -->
+                    <div class="text-center py-4 border-bottom">
+                        <!-- <div class="logo-placeholder mx-auto mb-2"></div> -->
+                        <div class="fs-6 fw-bold text-dark">استینو</div>
+                        <div class="fs-7 text-muted">سافت</div>
+                    </div>
+                    
+                    <!-- Navigation -->
+                    <nav class="flex-grow-1 py-3">
+                        <ul class="nav flex-column gap-1 px-3">
+                            <li class="nav-item">
+                                <span style="color: gray">منو</span>
+                                <a class="nav-link active d-flex align-items-center gap-2" href="#">
+                                    <i class="bi bi-grid-fill"></i>
+                                    <span>دانشبورد</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link d-flex align-items-center gap-2" href="#">
+                                    <i class="bi bi-ticket-perforated"></i>
+                                    <span>تیکت ها</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link d-flex align-items-center gap-2" href="#">
+                                    <i class="bi bi-chat-dots"></i>
+                                    <span>پیام ها</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link d-flex align-items-center gap-2" href="#">
+                                    <i class="bi bi-book"></i>
+                                    <span>پایگاه دانش</span>
+                                </a>
+                            </li>
+                        </ul>
+                        
+                        <div class="px-3 mt-4">
+                            <div class="text-muted small mb-2 px-2">OTHERS</div>
+                            <ul class="nav flex-column gap-1">
+                                <li class="nav-item">
+                                    <a class="nav-link d-flex align-items-center gap-2" href="#">
+                                        <i class="bi bi-gear"></i>
+                                        <span>تنظیمات</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link d-flex align-items-center gap-2" href="#">
+                                        <i class="bi bi-person"></i>
+                                        <span>حساب من</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link d-flex align-items-center gap-2" href="#">
+                                        <i class="bi bi-question-circle"></i>
+                                        <span>کمک</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="py-4 border-top company-image">
+                        <img src="../Vector.svg" alt="company logo" width="40%">
+                        <span>نسخه ۳.۴.۱۵</span>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <div class="main-content" style="width: -moz-available;">
+
+                            <header>
+                                <div class="top-header position-sticky top-0 start-0 end-0 bg-white border-bottom">
+                                    <div class="d-flex align-items-center justify-content-between px-4 py-3">
+
+                                    <!-- navbar search -->
+
+                                        <div class="search-box">
+                                            <i class="bi bi-search"></i>
+                                            <input type="text" placeholder="جستجو...">
+                                        </div>
+                                    
+                                    <!-- navbar user account -->
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="dropdown">
+                                            <button class="btn btn-link text-decoration-none dropdown-toggle d-flex align-items-center gap-2 text-dark" type="button" data-bs-toggle="dropdown">
+                                                <img src="/diverse-woman-portrait.png" alt="User" class="avatar-sm">
+                                                <span>حساب کاربری</span>
+                                                <i class="bi bi-chevron-down small"></i>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">پروفایل</a></li>
+                                                <li><a class="dropdown-item" href="#">تنظیمات</a></li>
+                                                <li><hr class="dropdown-divider"></li>
+                                                <li><a class="dropdown-item" href="#">خروج</a></li>
+                                            </ul>
+                                        </div>
+                                        <button class="btn btn-link position-relative text-dark">
+                                            <i class="bi bi-bell fs-5"></i>
+                                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 9px;">
+                                                3
+                                            </span>
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </div>
+                            </header>
+
+
+                            <div class="chatSection d-flex" >
+
+
+            <div class="col-auto conversation-list border-end">
+                <div class="d-flex flex-column h-100">
+                    <!-- Header -->
+                    <div class="p-3 border-bottom bg-white">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <h5 class="mb-0">گفتگو ها</h5>
+                            <button class="btn btn-link text-decoration-none p-0">
+                                <i class="bi bi-arrow-left"></i>
+                            </button>
+                        </div>
+                        
+                        <!-- Filters -->
+                        <div class="d-flex gap-2 mb-3 flex-wrap">
+                            <button class="btn btn-sm btn-light border">
+                                <i class="bi bi-funnel"></i>
+                            </button>
+                            <span class="badge bg-light text-dark border d-flex align-items-center gap-1">
+                                پیام جدید
+                                <i class="bi bi-x"></i>
+                            </span>
+                            <span class="badge bg-light text-dark border d-flex align-items-center gap-1">
+                                خوانده نشده
+                                <i class="bi bi-x"></i>
+                            </span>
+                        </div>
+                        
+                        <!-- Search -->
+                        <div class="input-group input-group-sm">
+                            <input type="text" class="form-control" placeholder="جستجو">
+                            <span class="input-group-text bg-white">
+                                <i class="bi bi-search"></i>
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <!-- Conversation Items -->
+                    <div class="flex-grow-1 overflow-auto">
+                        <!-- Active Conversation -->
+                        <div class="conversation-item active">
+                            <div class="d-flex align-items-start gap-3 p-3">
+                                <div class="position-relative">
+                                    <img src="/diverse-woman-portrait.png" alt=" user image" class="avatar">
+                                </div>
+                                <div class="flex-grow-1 min-w-0" style="position: relative;">
+                                    <div class="d-flex justify-content-between align-items-start mb-1 dots">
+                                        <button class="btn btn-link btn-sm text-muted p-0">
+                                            <i class="bi bi-three-dots"></i>
+                                        </button>
+                                    <span class="badge bg-danger notification-badge">1</span>
+                                    </div>
+                                        <h6 class="mb-0 fs-6">تینا دیبا</h6>
+
+                                    <p class="text-muted small mb-0 text-truncate">نام کاربری خودم رو روزانه میفرستید...</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Other Conversations -->
+                        <div class="conversation-item">
+                            <div class="d-flex align-items-start gap-3 p-3">
+                                <div class="position-relative">
+                                    <img src="/man.jpg" alt="user image" class="avatar">
+                                </div>
+                                <div class="flex-grow-1 min-w-0" style="position: relative;">
+                                    <div class="d-flex justify-content-between align-items-start mb-1 dots">
+                                        <button class="btn btn-link btn-sm text-muted p-0">
+                                            <i class="bi bi-three-dots"></i>
+                                        </button>
+                                    <span class="badge bg-danger notification-badge">1</span>
+                                    </div>
+                                        <h6 class="mb-0 fs-6">محمد بیات</h6>
+                                    <p class="text-muted small mb-0 text-truncate">نام کاربری خودم رو روزانه میفرستید...</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="conversation-item">
+                            <div class="d-flex align-items-start gap-3 p-3">
+                                <div class="position-relative">
+                                    <img src="/woman-2.jpg" alt="user image" class="avatar">
+                                </div>
+                                <div class="flex-grow-1 min-w-0" style="position: relative;">
+                                    <div class="d-flex justify-content-between align-items-start mb-1 dots">
+                                        <button class="btn btn-link btn-sm text-muted p-0">
+                                            <i class="bi bi-three-dots"></i>
+                                        </button>
+                                    <span class="badge bg-danger notification-badge">3</span>
+                                    </div>
+                                        <h6 class="mb-0 fs-6">آنا نادری</h6>
+
+                                    <p class="text-muted small mb-0 text-truncate">نام کاربری خودم رو روزانه میفرستید...</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="conversation-item">
+                            <div class="d-flex align-items-start gap-3 p-3">
+                                <div class="position-relative">
+                                    <img src="/woman-3.jpg" alt="user image" class="avatar">
+                                </div>
+                                <div class="flex-grow-1 min-w-0" style="position: relative;">
+                                    <div class="d-flex justify-content-between align-items-start mb-1 dots">
+                                        <button class="btn btn-link btn-sm text-muted p-0">
+                                            <i class="bi bi-three-dots"></i>
+                                        </button>
+                                    <span class="badge bg-danger notification-badge">3</span>
+                                    </div>
+                                        <h6 class="mb-0 fs-6">آنا نادری</h6>
+                                    <p class="text-muted small mb-0 text-truncate">نام کاربری خودم رو روزانه میفرستید...</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="conversation-item">
+                            <div class="d-flex align-items-start gap-3 p-3">
+                                <div class="position-relative">
+                                    <img src="/woman-4.jpg" alt="user image" class="avatar">
+                                </div>
+                                <div class="flex-grow-1 min-w-0" style="position: relative;">
+                                    <div class="d-flex justify-content-between align-items-start mb-1 dots">
+                                        <button class="btn btn-link btn-sm text-muted p-0">
+                                            <i class="bi bi-three-dots"></i>
+                                        </button>
+                                    <span class="badge bg-danger notification-badge">3</span>
+                                    </div>
+                                        <h6 class="mb-0 fs-6">آنا نادری</h6>
+                                    <p class="text-muted small mb-0 text-truncate">نام کاربری خودم رو روزانه میفرستید...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Chat Area -->
+            <div class="col chat-area">
+                <div class="d-flex flex-column h-100">
+                    <!-- Chat Header -->
+                    <div class="chat-header border-bottom p-3 bg-white">
+                        <div class="d-flex align-items-center gap-3">
+                            <img src="/diverse-woman-portrait.png" alt="user image" class="avatar">
+                            <div>
+                                <h6 class="mb-0">تینا دیبا</h6>
+                                <small class="text-muted">آنلاین</small>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Messages -->
+                    <div class="flex-grow-1 overflow-auto p-4 messages-container">
+                        <!-- Sent Message -->
+                        <div class="d-flex justify-content-start mb-3">
+                            <div class="d-flex gap-2 align-items-end">
+                                <img src="/diverse-woman-portrait.png" alt="User" class="avatar-sm">
+                                <div>
+                                    <div class="message-bubble message-sent">
+                                        سلام. مشکل شما در حال بررسی است. لطفا نام کاربری دقیق خود را ارسال کنید.
+                                    </div>
+                                    <div class="message-time">13:34</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Received Message -->
+                        <div class="d-flex justify-content-end mb-3">
+                            <div>
+                                <div class="message-bubble message-received">
+                                    نام کاربری من ahmad.mohammadi است
+                                </div>
+                                <div class="message-time text-end">13:34</div>
+                            </div>
+                        </div>
+
+                        <!-- Sent Message -->
+                        <div class="d-flex justify-content-start mb-3">
+                            <div class="d-flex gap-2 align-items-end">
+                                <img src="/diverse-woman-portrait.png" alt="User" class="avatar-sm">
+                                <div>
+                                    <div class="message-bubble message-sent">
+                                        سلام. مشکل شما در حال بررسی است. لطفا نام کاربری دقیق خود را ارسال کنید.
+                                    </div>
+                                    <div class="message-time">13:34</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- System Message -->
+                        <div class="text-center my-3">
+                            <span class="badge bg-light text-muted border px-3 py-2">پیام های تازه</span>
+                        </div>
+
+                        <!-- Sent Message -->
+                        <div class="d-flex justify-content-start mb-3">
+                            <div class="d-flex gap-2 align-items-end">
+                                <img src="/diverse-woman-portrait.png" alt="User" class="avatar-sm">
+                                <div>
+                                    <div class="message-bubble message-sent">
+                                        سلام. مشکل شما در حال بررسی است. لطفا نام کاربری دقیق خود را ارسال کنید.
+                                    </div>
+                                    <div class="message-time">13:34</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Received Message -->
+                        <div class="d-flex justify-content-end mb-3">
+                            <div>
+                                <div class="message-bubble message-received">
+                                    نام کاربری من ahmad.mohammadi است
+                                </div>
+                                <div class="message-time text-end">13:34</div>
+                            </div>
+                        </div>
+
+                        <!-- Sent Message -->
+                        <div class="d-flex justify-content-start mb-3">
+                            <div class="d-flex gap-2 align-items-end">
+                                <img src="/diverse-woman-portrait.png" alt="User" class="avatar-sm">
+                                <div>
+                                    <div class="message-bubble message-sent">
+                                        اوکی
+                                    </div>
+                                    <div class="message-time">13:34</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- Message Input -->
+                    <!-- <div class="message-input-area border-top p-3 bg-white">
+                        <div class="input-group mb-2">
+                            <button class="btn btn-primary px-4">
+                                <i class="bi bi-send-fill ms-1"></i>
+                                ارسال
+                            </button>
+                            <input type="text" class="form-control" placeholder="پاسخ خود را بنویسید...">
+                            <button class="btn btn-light border">
+                                <i class="bi bi-paperclip"></i>
+                            </button>
+                            <button class="btn btn-light border">
+                                <i class="bi bi-emoji-smile"></i>
+                            </button>
+                            <button class="btn btn-light border">
+                                <i class="bi bi-image"></i>
+                            </button>
+                            <button class="btn btn-light border">
+                                <i class="bi bi-fonts"></i>
+                            </button>
+                        </div>
+                    </div> -->
+
+
+                        <div class="message-input">
+                            <div class="input">
+                                <form action="#" method="#">
+                                    <input type="text" name="type-text" placeholder="پاسخ خود را بنویسید ..." maxlength="50px">
+                                </form>
+                            </div>
+                            <div class="send-button-input-options">
+                                <div class="input-actions">
+                                    <button class="btn btn-icon"><i class="bi bi-paperclip"></i></button>
+                                    <button class="btn btn-icon"><i class="bi bi-emoji-smile"></i></button>
+                                    <button class="btn btn-icon"><i class="bi bi-image"></i></button>
+                                    <button class="btn btn-icon"><i class="bi bi-type"></i></button>
+                                </div>
+                                <div class="send-button">
+                                    <button class="btn btn-primary btn-send">
+                                        <i class="bi bi-send"></i>
+                                        ارسال
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                            </div>
+
+                        </div>
+
+
+            <div class="col-auto details-panel border-end">
+                <div class="d-flex flex-column h-100">
+                    
+                    <!-- User Info -->
+                    <div class="p-3 border-bottom" style="display: flex; justify-content:space-between;">
+                        <div class="text-center mb-3 user-image">
+                            <img src="/diverse-woman-portrait.png" alt="user image" class="avatar-lg mb-2">
+                            <h6 class="mb-0">تینا دیبا</h6>
+                        </div>
+                        <button class="btn btn-link btn-sm text-decoration-none p-0">
+                                <i class="bi bi-pencil"></i>
+                                Edit
+                        </button>
+                    </div>
+
+
+                    <!-- Ticket Details -->
+                    <div class="p-3 flex-grow-1">
+                        <div class="mb-3 ticket-detail-options">
+                            <div class="text-muted small mb-1">
+                                <i class="bi bi-hash"></i>
+                                شماره تیکت
+                            </div>
+                            <div class="fw-bold">#۲۰۲۴۰۰۱</div>
+                        </div>
+
+                        <div class="mb-3 ticket-detail-options">
+                            <div class="text-muted small mb-1">
+                                <i class="bi bi-telephone"></i>
+                                شماره همراه
+                            </div>
+                            <div class="fw-bold">۰۹۱۹۶۲۰۷۰۰</div>
+                        </div>
+
+                        <div class="mb-3 ticket-detail-options">
+                            <div class="text-muted small mb-1">
+                                <i class="bi bi-box"></i>
+                                محصول
+                            </div>
+                            <div class="fw-bold">سیستم اسناد مدارک DMS</div>
+                        </div>
+
+                        <div class="mt-4 add-more-info-button">
+                            <button class="btn text-decoration-none p-0 small">
+                                <i class="bi bi-plus-circle"></i>
+                                اضافه کردن اطلاعات بیشتر
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
