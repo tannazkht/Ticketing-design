@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سیستم تیکتینگ</title>
+    <title>تیکت دیتیل | استینو سافت</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
@@ -13,64 +13,107 @@
 
 
 
+<div class="containerfluid d-flex">
 
-
-
-<section class="main">
-
-
-
-    <!-- Top Navigation -->
-    <nav class="navbar navbar-light bg-white border-bottom px-4">
-        <div class="container-fluid">
-
-            <div class="navbar-brand">
-                <h4 class="mb-0 fw-bold">استینو<br><small class="text-muted fs-6">سافت</small></h4>
-            </div>
-
-
-
-
-            <div class="flex-grow-1 mx-5">
-                <div class="input-group">
-                    <input type="text" class="form-control" style="background-color: #f8f9fa;" placeholder="جستجو...">
-                    <span class="input-group-text bg-white">
-                        <i class="bi bi-search"></i>
-                    </span>
+        <div class="right-section">
+             
+                <div class="sidebar">
+                <!-- sidebar -->
+                <div class="logo">
+                    <a href="#">
+                    <img src="src/logo/estinoSoftLogo.svg" alt="Estino Soft Logo">
+                    </a>
                 </div>
-            </div>
-
-  
-
+            <div class="menu">
+                <p class="menu-title">منو</p>
 
 
-            <div class="d-flex align-items-center gap-3">
-                <div class="dropdown">
-                    <button class="btn dropdown-toggle d-flex align-items-center gap-2" type="button" data-bs-toggle="dropdown">
-                        <!-- Replace placeholder with icon avatar -->
-                        <div class="avatar-circle bg-primary">
-                            <i class="bi bi-person-fill text-white"></i>
-                        </div>
-                        <span>حساب کاربری</span>
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">پروفایل</a></li>
-                        <li><a class="dropdown-item" href="#">تنظیمات</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">خروج</a></li>
-                    </ul>
+                <a href="#" class="menu-item">
+                <img class="icon" src="src/icons/dashboard.svg" alt="dashboard icon">
+                <span class="menu-text">داشبورد</span>
+                </a>
+                <a href="#" class="menu-item">
+                <img class="icon" src="src/icons/Buy.svg" alt="buy icon">
+                <span class="menu-text">تیکت ها</span>
+                </a>
+                <a href="#" class="menu-item">
+                <img class="icon" src="src/icons/newTicket.svg" alt="dashboard icon">
+                <span class="menu-text">تیکت جدید</span>
+                </a>
+                <a href="#" class="menu-item">
+                <img class="icon" src="src/icons/messages.svg" alt="dashboard icon">
+                <span class="menu-text">پیام ها </span>
+                </a>
+                <a href="#" class="menu-item">
+                <img class="icon" src="src/icons/messages.svg" alt="dashboard icon">
+                <span class="menu-text">پایگاه دانش</span>
+                </a>
+
+
+
+                <div class="others">
+                <span>OTHERS</span>
                 </div>
-                <button class="btn position-relative">
-                    <i class="bi bi-bell"></i>
-                    <span class="position-absolute top-0 start-0 translate-middle badge rounded-pill bg-danger">
-                        3
-                    </span>
-                </button>
+
+
+
+                <div id="account-separator-placeholder"></div>
+
+
+                <a href="#" class="menu-item account-item" data-key="account">
+                <img class="icon" src="src/icons/Setting.svg" alt="Setting icon">
+                <span class="menu-text">تنظیمات</span>
+                </a>       
+                <div id="account-area-placeholder"></div>
+                <a href="#" class="menu-item">
+                <img class="icon" src="src/icons/Profile.svg" alt="dashboard icon">
+                <span class="menu-text">حساب من</span>
+                </a>
+                <a href="#" class="menu-item">
+                <img class="icon" src="src/icons/help.svg" alt="dashboard icon">
+                <span class="menu-text">کمک</span>
+                </a>
             </div>
             
+            <footer class="sidebar-footer"> </footer>
 
+
+            <a href="#" class="logo-image">
+                <img src="./Vector.svg" alt="logo image">
+                <p>نسخه 3.4.15</p>
+            </a>
+
+
+                
+                </div>
         </div>
-    </nav>
+
+<div class="left-section">
+
+
+
+
+              <!-- navbar -->
+          <header class="topbar">
+            <div class="search-box"> 
+              <input class="textSearchBox" type="text" placeholder="جستجو ...">
+              <img src="src/icons/search.svg" alt="search icon">
+            </div>
+            <div class="topbar-right">
+              <div class="notification">
+                <img src="src/icons/bell.svg" alt="notification icon"> 
+                <span class="notifSign"></span>
+              </div>
+              <div class="user-profile">
+                <img class="user-avatar" src="src/images/user1.jpg" alt="user avatar"> 
+                <div class="user-info">
+                  <span class="user-name">ماهان یکتا</span>
+                  <span class="user-role">کارشناس فروش</span>
+                </div>
+                <img class="dropdown-icon" src="src/icons/chevron-down.svg" alt="dropdown icon"> 
+              </div>
+            </div>
+          </header>
 
 
 
@@ -78,7 +121,7 @@
 
     <div class="d-flex">
         <!-- Right Sidebar -->
-        <div class="sidebar-right bg-light border-start">
+        <!-- <div class="sidebar-right bg-light border-start">
             <div class="p-3">
                 <div class="text-muted small mb-3">منو</div>
                 <ul class="nav flex-column gap-2">
@@ -136,7 +179,7 @@
                     </li>
                 </ul>
             </div>
-        </div>
+        </div> -->
 
 
 
@@ -219,7 +262,7 @@
                             </div>
                             
                             <div class="ticket-description mt-3">
-                                <p>توضیحات: نمیدونم اما نام کاربری و رمز عبور خود وارد سیستم مدیریت اسناد شوم، پیغام خطای نام کاربری یا رمز عبور اشتباه است. تمامش داده میشود.</p>
+                                <p>توضیحات: نمیدونم اما هنگامی که می خواهم با نام کاربری و رمز عبور خود وارد سیستم مدیریت اسناد شوم، پیغام خطای نام کاربری یا رمز عبور اشتباه است. نمامش داده می شود.</p>
                                 <div class="attachment-link">
                                     <span>فایل پیوست:</span>
                                     <i class="bi bi-paperclip text-muted"></i>
@@ -640,8 +683,9 @@
     </div>
 
 
-</section>
+</div>
 
+</div>
 
 
 
