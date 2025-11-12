@@ -608,6 +608,8 @@ body {
 
 .left-section {
   width: 90%;
+  margin-right: 53px;
+
 }
 
 
@@ -675,8 +677,10 @@ body {
 }
 
 .logo-image {
-  padding: 7%;
+  /* padding: 7%; */
   text-decoration: none;
+  position: fixed;
+  bottom: 0;
 }
 
 .logo-image p {
