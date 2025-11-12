@@ -16,73 +16,77 @@
             <!-- Right Sidebar -->
             <div class="col-auto sidebar-right bg-light border-end">
                 <div class="d-flex flex-column h-100">
-                    <!-- Logo -->
-                    <div class="text-center py-4 border-bottom company-name">
-                        <!-- <div class="logo-placeholder mx-auto mb-2"></div> -->
-                        <div class="fs-6 fw-bold text-dark">استینو</div>
-                        <div class="fs-7 text-muted">سافت</div>
-                    </div>
-                    
-                    <!-- Navigation -->
-                    <nav class="flex-grow-1 py-3">
-                        <ul class="nav flex-column gap-1 px-3 h-100">
-                                <span style="color: gray;">منو</span>
 
-                            <li class="nav-item">
-                                <a class="nav-link active d-flex align-items-center gap-2" href="#">
-                                    <span>داشبورد</span>
-                                    <i class="bi bi-grid-fill"></i>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link d-flex align-items-center gap-2" href="#">
-                                    <span>تیکت ها</span>
-                                    <i class="bi bi-ticket-perforated"></i>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link d-flex align-items-center gap-2" href="#">
-                                    <span>تیکت جدید</span>
-                                    <i class="bi bi-file-text"></i>
-                                    <!-- <i class="bi bi-chat-dots"></i> -->
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link d-flex align-items-center gap-2" href="#">
-                                    <span>پایگاه دانش</span>
-                                    <i class="bi bi-book"></i>
-                                </a>
-                            </li>
-                        </ul>
-                        
-                        <div class="px-3 mt-4">
-                            <div class="text-muted small mb-2 px-2">OTHERS</div>
-                            <ul class="nav flex-column gap-1">
-                                <li class="nav-item">
-                                    <a class="nav-link d-flex align-items-center gap-2" href="#">
-                                        <span>تنظیمات</span>
-                                        <i class="bi bi-gear"></i>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link d-flex align-items-center gap-2" href="#">
-                                        <span>حساب من</span>
-                                        <i class="bi bi-person"></i>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link d-flex align-items-center gap-2" href="#">
-                                        <span>کمک</span>
-                                        <i class="bi bi-question-circle"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-                    <div class="py-4 company-image">
-                        <img src="../company-logo.svg" alt="company logo" width="40%">
-                        <span>نسخه ۳.۴.۱۵</span>
-                    </div>
+
+    <div class="logo">
+        <a href="#">
+          <img src="src/logo/estinoSoftLogo.svg" alt="Estino Soft Logo">
+        </a>
+      </div>
+      <div class="menu">
+        <p class="menu-title">منو</p>
+
+
+        <a href="#" class="menu-item">
+          <img class="icon" src="src/icons/dashboard.svg" alt="dashboard icon">
+          <span class="menu-text">داشبورد</span>
+        </a>
+        <a href="#" class="menu-item">
+          <img class="icon" src="src/icons/Buy.svg" alt="buy icon">
+          <span class="menu-text">تیکت ها</span>
+        </a>
+        <a href="#" class="menu-item">
+          <img class="icon" src="src/icons/newTicket.svg" alt="dashboard icon">
+          <span class="menu-text">تیکت جدید</span>
+        </a>
+        <a href="#" class="menu-item">
+          <img class="icon" src="src/icons/messages.svg" alt="dashboard icon">
+          <span class="menu-text">پیام ها </span>
+        </a>
+        <a href="#" class="menu-item">
+          <img class="icon" src="src/icons/messages.svg" alt="dashboard icon">
+          <span class="menu-text">پایگاه دانش</span>
+        </a>
+
+
+
+        <div class="others">
+          <span>OTHERS</span>
+        </div>
+
+
+
+        <div id="account-separator-placeholder"></div>
+
+
+        <a href="#" class="menu-item account-item" data-key="account">
+          <img class="icon" src="src/icons/Setting.svg" alt="Setting icon">
+          <span class="menu-text">تنظیمات</span>
+        </a>       
+        <div id="account-area-placeholder"></div>
+        <a href="#" class="menu-item">
+          <img class="icon" src="src/icons/Profile.svg" alt="dashboard icon">
+          <span class="menu-text">حساب من</span>
+        </a>
+        <a href="#" class="menu-item">
+          <img class="icon" src="src/icons/help.svg" alt="dashboard icon">
+          <span class="menu-text">کمک</span>
+        </a>
+      </div>
+      
+      <!-- <footer class="sidebar-footer"> </footer> -->
+
+
+      <a href="#" class="logo-image">
+        <img src="./Vector.svg" alt="logo image">
+        <p>نسخه 3.4.15</p>
+      </a>
+
+
+
+
+
+
                 </div>
             </div>
 
@@ -92,26 +96,35 @@
 
         <!-- Main Content -->
         <main class="main-content">
-            <!-- Header -->
-            <header class="header">
-                    <!-- <i class="bi bi-search search-icon"></i> -->
-                <div class="search-bar">
-                    <input type="text" class="search-input" placeholder="جستجو">
-                </div>
-                <div class="user-section">
-                    <div class="user-avatar"></div>
-                    <div class="user-info">
-                        <span class="user-name">حساب کاربری</span>
-                        <i class="bi bi-chevron-down" style="color: #a6abc8; font-size: 14px;"></i>
-                    </div>
-                    <div class="notification-icon">
-                        <i class="bi bi-bell" style="color: #a6abc8; font-size: 20px;"></i>
-                        <span class="notification-badge"></span>
-                    </div>
-                </div>
+            <!-- Header - navbar -->
+            <div class="navbar">
+                  <header class="topbar">
+        <div class="search-box"> 
+          <input class="textSearchBox" type="text" placeholder="جستجو ...">
+          <img src="src/icons/search.svg" alt="search icon">
+        </div>
+        <div class="topbar-right">
+          <div class="notification">
+            <img src="src/icons/bell.svg" alt="notification icon"> 
+            <span class="notifSign"></span>
+          </div>
+          <div class="user-profile">
+            <img class="user-avatar" src="src/images/user1.jpg" alt="user avatar"> 
+            <div class="user-info">
+              <span class="user-name">ماهان یکتا</span>
+              <span class="user-role">کارشناس فروش</span>
+            </div>
+            <img class="dropdown-icon" src="src/icons/chevron-down.svg" alt="dropdown icon"> 
+          </div>
+        </div>
+      </header>
+      </div>
 
 
-            </header>
+
+
+
+
 
             <!-- Content -->
             <div class="content">

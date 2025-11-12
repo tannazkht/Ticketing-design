@@ -1,0 +1,380 @@
+@font-face {
+  font-family: 'IRANSansXFaNum';
+  src: url('src/fonts/IRANSansXFaNum-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('src/fonts/Poppins-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #FFFFFF;
+  font-family: 'IRANSansXFaNum', sans-serif;
+  direction: rtl;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  position: relative; 
+}
+
+.sidebar {
+  position: relative;
+  width: 240px;
+  background: #F1F2F7;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+  padding-right: 10px;
+}
+
+.header-line {
+  position: absolute;
+  top: 64px;
+  right: 0;
+  left: 0;
+  height: 0.5px;
+  background-color: #C8CBD9;
+  z-index: 2;
+}
+
+.logo img {
+  width: 78.74px;
+  height: 54px;
+  margin-top: 4px;
+  margin-left: 138px;
+}
+
+.menu {
+  width: 200px;
+  margin-top: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.menu-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 11px;
+  letter-spacing: 1px;
+  color: #082431;
+  text-align: right;
+  margin-bottom: 20px;
+  opacity: 0.5;
+  padding-right: 18px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 200px;
+  height: 44.8px;
+  margin: 10px 0;
+  border-radius: 5px;
+  padding-right: 10px;
+  cursor: pointer;
+  transition: background-color 0.25s ease, color 0.25s ease;
+  text-decoration: none;
+}
+
+.menu-text {
+  font-family: 'IRANSansXFaNum', sans-serif;
+  font-weight: 400;
+  font-size: 12.66px;
+  color: gray;
+  transition: color 0.25s ease;
+}
+
+.others {
+  color: gray;
+}
+
+.logo-image {
+  padding: 7%;
+  text-decoration: none;
+}
+
+.logo-image p {
+  color: gray;
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+  margin-left: 10px;
+  filter: brightness(0) saturate(100%) invert(78%) sepia(6%) saturate(396%) hue-rotate(197deg) brightness(91%) contrast(90%);
+  transition: filter 0s; 
+}
+
+.menu-item:hover {
+  background: rgba(112, 127, 221, 0.1);
+}
+
+.menu-item.active {
+  background-color: rgba(112, 127, 221, 0.1);
+}
+
+.menu-item.active .menu-text,
+.menu-item:hover .menu-text,
+.menu-item:hover .icon,
+.menu-item.active .icon {
+  color: #1D577A;
+  filter: brightness(0) saturate(100%) invert(23%) sepia(18%) 
+          saturate(2759%) hue-rotate(162deg) brightness(94%) contrast(86%);
+}
+
+.account-separator {
+  width: 200px;
+  border-top: 1px solid #D2D3DA;
+  margin: 10px 0;
+}
+
+.account-submenu {
+  display: flex;
+  flex-direction: column;
+}
+
+.account-submenu .menu-item {
+  margin: 5px 0;
+  height: 44.8px;;
+}
+
+.submenu-text {
+  color: #C4C7DB;
+  font-family: 'IRANSansXFaNum', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  margin-right: 28px;
+  transition: color 0.25s ease;
+}
+
+.account-submenu .menu-item:hover {
+  background: rgba(112, 127, 221, 0.1);
+}
+
+.account-submenu .menu-item:hover .submenu-text,
+.account-submenu .menu-item:hover .icon {
+  color: #1D577A;
+  filter: brightness(0) saturate(100%) invert(23%) sepia(18%) 
+          saturate(2759%) hue-rotate(162deg) brightness(94%) contrast(86%);
+}
+
+.sidebar-footer {
+  margin-top: auto;
+  width: 100%;
+  border-bottom: 0.5px solid #C8CBD9;
+}
+
+.chat-container {
+  
+  position: relative; 
+  width: 38px;       
+  height: 38px; 
+  margin-top: 13px;     
+  margin-left: 182px; 
+  margin-bottom: 13px;
+
+}
+
+.chat-bg {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.chat-fg {
+ position: absolute;
+  top: 50%;  
+  left: 50%; 
+  width: 29px;
+  height: 29px;
+  transform: translate(-47%, -45%); 
+  z-index: 1;
+}
+
+.main-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 12px 24px; */
+}
+
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background-color: #f1f3f4;
+  border-radius: 5px;
+  padding-top: 6px 12px;
+  width: 45%;
+  height: 32px;
+  margin-right: 40px;
+  margin-top: 16px;
+}
+
+.search-box img {
+  width: 12px;
+  height: 12px;
+  margin-left: 16px;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: 14px;
+  width: 100%;
+}
+
+.textSearchBox {
+  margin-right: 13px;
+  opacity: 0.6;
+  color:#1F384C ;
+  font-family: Poppins;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 13px;
+  letter-spacing: 0.5px; 
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.notification {
+  position: relative;
+  width: 18px;
+  height: 22px;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-left: 41px;
+}
+  
+.notification img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.notifSign {
+  position: absolute;
+  top: -3px;       
+  right: -3px;     
+  width: 8px;
+  height: 8px;
+  background-color: #EC5252;
+  border: 1.5px solid white; 
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 13px;
+}
+
+.user-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  margin-left: 11px;
+  object-fit: cover;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  width: 85;
+  height: 38;
+  margin-left: 30px;
+}
+
+.user-name {
+  font-family: 'IRANSansXFaNum', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  white-space: nowrap;
+}
+
+.user-role {
+  font-family: 'IRANSansXFaNum', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  opacity: 0.6;
+  white-space: nowrap;
+}
+
+.dropdown-icon {
+  width: 12px;
+  height: 12px;
+  margin-left: 34px;
+}
+
+.footer-line {
+  position: absolute;
+  bottom: 64px; 
+  right: 0;
+  left: 0;
+  height: 0.5px;
+  background-color: #C8CBD9;
+  z-index: 2;
+}
+
+.footer {
+  width: 100%;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: auto;
+  background-color: #FFFFFF;
+}
+
+.footerText {
+  font-family: 'IRANSansXFaNum', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 155%;
+  text-align: right;
+  color: #909BA5;
+  width: 480px;
+  padding-right: 40px;
+}
+
+
+
+
+
+
+
+
+
+
